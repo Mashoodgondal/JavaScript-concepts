@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hy</h1>
+    <script>
+      // var time = prompt("Enter current Time");
+      // if (time >= 4 && time <= 9) {
+      //   alert("Good Morning");
+      // } else if (time >= 10 && time <= 16) {
+      //   alert("Good afternoon");
+      // } else if (time >= 17 && time <= 20) {
+      //   alert("Good evening");
+      // } else if (time >= 21 && time <= 24) {
+      //   alert("Good Night");
+      // } else {
+      //   alert("Plese enter time between 1 to 24");
+      // }
+
+      // let age = [21, -323, 34, 3, 342];
+      // let maxNum = Number.MIN_SAFE_INTEGER;
+      // for (let i = 0; i > age.length; i++) {
+      //   if (maxNum < age[i]) maxNum = age[i];
+      // }
+      // console.log(maxNum);
+
+      const numbers = [10, 5, 20, 3, 8];
+      const maxNumber = numbers.reduce(
+        (max, current) => (current > max ? current : max),
+        numbers[0]
+      );
+
+      console.log(maxNumber); // Output: 20
+
+      // const maximumNum = (arr) => {
+      //   return arr.reduce(function (pre, cru) {
+      //     return pre > cru ? pre : cru;
+      //   });
+      // };
+      // console.log(maximumNum);
+    </script>
+  </body>
+</html>

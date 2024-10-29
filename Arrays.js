@@ -375,6 +375,26 @@
 // const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index);
 // console.log(duplicate);
 
+// ---------Count duplicate---------
+let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];
+let count = 0 
+
+const countDuplicate=()=>{
+    const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
+    if (duplicate>1) {
+        count=count+1
+    }
+    return count
+}
+
+
+console.log(countDuplicate(arr));
+
+
+
+
+
+
 // MAP -- REDUCE -- FILTER 
 
 // a)  MAP
@@ -487,5 +507,15 @@
 //     return count
 // }
 // console.log(countOdd(arr));
-
+// -----------Delete from specific position---------
+// let arr = [34,45,32,4,56,2,4,53,23,32]
+// if(arr.length>0){
+//   arr.splice(4,1)
+//   console.log(arr);
+  
+// }
+// else{
+//     console.log("invalid position");
+    
+// }
 

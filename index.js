@@ -45,6 +45,10 @@
 // }
 
 // ------------ARRAYS-----------
+// ----------Copy Array---------
+// let arr = [34,45,32,4,56,2,4,53,23,32]
+// let arr2= arr
+// console.log(arr2);
 
 // -------Negative Number-------
 

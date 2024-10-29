@@ -427,6 +427,16 @@
 //     }
     
 // }
+// ------Even Numbers from Arrays-----------
+
+// let arr = [3, -1, 5, -9, 0, -7, 8, -4];
+// for (let index = 0; index < arr.length; index++) {
+//     if (arr[index]%2==0) {
+//         console.log(arr[index]);
+        
+//     }
+    
+// }
 
 // ---------sum of Array----------
 
@@ -443,7 +453,7 @@
     
 //     let Count=0
 //    for (let i = 0; i < array.length; i++) {
-//     if (array[i]%0) {
+//     if (array[i]<0) {
 //       Count=  Count+1;
 //     }
     
@@ -463,15 +473,19 @@
 // console.log(countNegative(array));
 
 
-// ------Even Numbers from Arrays-----------
+// -------------Count all odd Numbers----------
 
-// let arr = [3, -1, 5, -9, 0, -7, 8, -4];
-// for (let index = 0; index < arr.length; index++) {
-//     if (arr[index]%2==0) {
-//         console.log(arr[index]);
-        
+// let arr = [34,45,32,4,56,2,4,53,23,32]
+// let count=0
+// const countOdd =()=>{
+//     for (let i = 0; i < arr.length; i++) {
+      
+//         if(arr[i]%2!==0){
+//             count=count+1
+//         }
 //     }
-    
+//     return count
 // }
+// console.log(countOdd(arr));
 
 

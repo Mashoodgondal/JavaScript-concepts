@@ -82,7 +82,7 @@
     
 //     let Count=0
 //    for (let i = 0; i < array.length; i++) {
-//     if (array[i]%0) {
+//     if (array[i]<0) {
 //       Count=  Count+1;
 //     }
     

@@ -373,22 +373,29 @@
 // let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];
 
 // const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index);
-// console.log(duplicate);
+
+// console.log(duplicate)
+
+// ------------Delete All Duplicate--------
+// let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];
+
+// const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) == index);
+
+// console.log(duplicate)
 
 // ---------Count duplicate---------
-let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];
-let count = 0 
+// let arr = [2, 32, 23, 43, 22, 43, 32, 43, 54, 4, 54];
 
-const countDuplicate=()=>{
-    const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
-    if (duplicate>1) {
-        count=count+1
-    }
-    return count
-}
+// const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
+
+   
+//     let duplicateArray= duplicate
+// let count= duplicateArray.filter((ele)=>ele>0).length
+   
 
 
-console.log(countDuplicate(arr));
+
+// console.log(count);
 
 
 
@@ -465,7 +472,6 @@ console.log(countDuplicate(arr));
 // console.log(sum);
 
 
-
 // ----------Count Negetive Elements--------
 
 // let array = [4, -1, -3, 7, 8, 2];
@@ -519,3 +525,45 @@ console.log(countDuplicate(arr));
     
 // }
 
+// ----------sort Array---------
+
+
+// let arr = [3, 1, 5, 9, 7, 8, 4];
+// let narray = arr.sort((a,b)=> a - b) //ascending
+// console.log(narray);
+
+// -----------for of ---------------
+
+
+// let arr=[2,34,43,5,3,5]
+// for( const val of arr){
+//     console.log(val);
+    
+// }
+  
+
+// ---------------Binaty Search---------------
+
+// let array =[3,66,7,65,7,9,6,56,87,75]
+
+// let sortedArray = array.sort((a,b)=>a-b)
+// const binarySearch=(arr,target)=>{
+//     let left=0 
+//     let right = arr.length-1
+//     while (left<=right) {
+//         const mid = Math.floor((left+right)/2)
+//         if (arr[mid]===target) {
+//             return mid 
+//         }
+//         else if(arr[mid]<target){left= mid +1}
+//         else{
+        
+//             right=  mid-1 
+//         }
+        
+//     }
+// return -1 
+// }
+// console.log(sortedArray);
+
+// console.log(binarySearch(sortedArray,20));

@@ -474,7 +474,16 @@
 
 // ----------Count Negetive Elements--------
 
-// let array = [4, -1, -3, 7, 8, 2];
+// let array = [4, -1, -3, 7, 8,-2];
+// let newarray = array.filter((ele)=>ele<0).length
+
+// console.log(newarray);
+
+
+// ||      ||     ||    ||
+// ||      ||     ||    ||
+
+
 // const countNegative=()=>{
     
 //     let Count=0

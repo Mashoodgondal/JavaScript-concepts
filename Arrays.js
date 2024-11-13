@@ -384,18 +384,18 @@
 // console.log(duplicate)
 
 // ---------Count duplicate---------
-// let arr = [2, 32, 23, 43, 22, 43, 32, 43, 54, 4, 54];
+let arr = [2, 32, 23, -43, 22, 43, 32, -43, 54, 4, 54];
 
-// const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
+const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
 
    
-//     let duplicateArray= duplicate
-// let count= duplicateArray.filter((ele)=>ele>0).length
+    // let duplicateArray= duplicate
+let count= duplicate.filter((ele)=>ele>0|| ele<0).length
    
 
 
 
-// console.log(count);
+console.log(count);
 
 
 
@@ -458,7 +458,7 @@
 
 // let arr = [3, -1, 5, -9, 0, -7, 8, -4];
 // for (let index = 0; index < arr.length; index++) {
-//     if (arr[index]%2==0) {
+//     if (arr[index]%2==!1) {
 //         console.log(arr[index]);
         
 //     }
@@ -511,7 +511,7 @@
 // -------------Count all odd Numbers----------
 
 // let arr = [34,45,32,4,56,2,4,53,23,32]
-// let count=0
+ // let count=0
 // const countOdd =()=>{
 //     for (let i = 0; i < arr.length; i++) {
       
@@ -537,7 +537,7 @@
 // ----------sort Array---------
 
 
-// let arr = [3, 1, 5, 9, 7, 8, 4];
+// let arr = [3, 1, 5, 9, 7, 8,];
 // let narray = arr.sort((a,b)=> a - b) //ascending
 // console.log(narray);
 
@@ -576,3 +576,5 @@
 // console.log(sortedArray);
 
 // console.log(binarySearch(sortedArray,20));
+
+

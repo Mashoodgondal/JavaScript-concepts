@@ -89,13 +89,65 @@
 // console.log(flatArray);
 
 // ------------Write a function to find the intersection of two arrays.------------
-let array1 = [1,3,4,5,9,12,14]
-let array2 = [1,9,12,14]
-let intersection = array1.filter(ele=>array2.includes(ele))
-console.log(intersection);
+// let array1 = [1,3,4,5,9,12,14]
+// let array2 = [1,9,12,14]
+// let intersection = array1.filter(ele=>array2.includes(ele))
+// console.log(intersection);
 
 
-// How can you sort an array of objects based on a specific key? (e.g., [{id: 1, name: "A"}, {id: 2, name: "B"}] sorted by name).
+//-----------How can you sort an array of objects based on a specific key? (e.g., [{id: 1, name: "A"}, {id: 2, name: "B"}] sorted by name).
+
+// const data = [
+//   { id: 3, name: "Charlie" },
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" }
+// ];
+
+// const sortedArray = data.sort((a,b)=>
+// {if(a.name>b.name)return 1
+//     if (a.name<b.name)return -1
+//     return 0
+// }
+// )
+// console.log(sortedArray);
+
+
+
+
 // Write a function to group elements of an array based on a specific condition (e.g., group numbers by even and odd).
+
+let array1 = [2,3,54,3,5,,3,56,74,88,65,65,27,15,74,74,14,62,44,35,6,]
+let array2 = [2,3,54,3,5,,3,56,74,88,65,65,27,15,74,74,14,62,44,35,6,]
+const grouped=(array1,array2)=>{
+const group={
+    eve:[],
+    odd:[]
+}
+        array1.forEach(element => {
+    if (element%2==0) {
+        group.eve.push(element)
+    }
+    else{
+        group.odd.push(element)
+    }
+});
+array2.forEach(element => {
+    if (element%2==0) {
+        group.eve.push(element)
+    }
+    else{
+        group.odd.push(element)
+    }
+});
+return group
+}
+console.log(grouped(array1,array2));
+
+
+
+
+
+
+
 // How can you shuffle the elements of an array randomly?
 

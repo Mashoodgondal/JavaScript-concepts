@@ -81,3 +81,21 @@
 // let largest = array.reduce((cru,pre)=>cru<pre?cru:pre)
 // console.log(largest);
 
+
+// -----------------How do you flatten a nested array (e.g., [1, [2, [3, [4]]]])?---------------
+
+// let array = [1, [2, [3, [4]]]]
+// let flatArray = array.flat(Infinity)
+// console.log(flatArray);
+
+// ------------Write a function to find the intersection of two arrays.------------
+let array1 = [1,3,4,5,9,12,14]
+let array2 = [1,9,12,14]
+let intersection = array1.filter(ele=>array2.includes(ele))
+console.log(intersection);
+
+
+// How can you sort an array of objects based on a specific key? (e.g., [{id: 1, name: "A"}, {id: 2, name: "B"}] sorted by name).
+// Write a function to group elements of an array based on a specific condition (e.g., group numbers by even and odd).
+// How can you shuffle the elements of an array randomly?
+

@@ -110,3 +110,28 @@
   
 
 
+// let person= {
+//     name:'ali',
+//     age:'43',
+//     gender:'male',
+//     address:'fsd'
+// }
+
+// const someDetails=({name,age})=>{
+//     console.log(name,age);
+    
+// }
+// someDetails(person)
+
+
+// function fun2(){
+//     console.log("function2");
+    
+// }
+// function fun1(fun2){
+//     console.log("function1");
+//     fun2()
+// }
+// fun1(fun2)
+
+

@@ -104,3 +104,20 @@
 //     return array.filter((element)=>element<0).length
 // }
 // console.log(countNegative(array));
+
+
+// -------------------Array sorting manually----------------
+
+// let numbers = [-23,-324,34,234,23,334,78,34,6576];
+// for (let i = 0; i < numbers.length; i++) {
+//     for (let j = 0; j < numbers.length-i; j++) {
+//         if (numbers[j]>numbers[j+1]) {
+//             let temp= numbers[j]
+//             numbers[j]=numbers[j+1]
+//             numbers[j+1]=temp
+//         }
+        
+//     }
+    
+// }
+// console.log(numbers);

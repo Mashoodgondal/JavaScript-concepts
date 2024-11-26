@@ -135,3 +135,20 @@
 // fun1(fun2)
 
 
+//  ------------Iterables----------------
+
+// let str = 'abc';
+// for (let char of str) {
+//     console.log(char);
+// }
+
+
+// const person = {
+//     name: 'anas',
+//     age: 24,
+//     degree: 'bscs'
+// }
+
+// for (let i of person) {
+//     console.log(i);
+// }

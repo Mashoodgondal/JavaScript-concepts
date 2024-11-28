@@ -72,6 +72,21 @@
 // }
 // console.log(MINIMUM)
 
+// --------------for of loop--------------
+
+// const arr = [1, 2, 34, 3, 5, 5, 5, 5];
+// console.log(arr);
+
+
+// let fruits = new Set([0, 1, 8]);
+// let fruits1 = fruits;
+
+// fruits.add('newValue')
+
+
+// console.log(fruits);
+// console.log(fruits1);
+
 
 
 //function:
@@ -384,18 +399,18 @@
 // console.log(duplicate)
 
 // ---------Count duplicate---------
-let arr = [2, 32, 23, -43, 22, 43, 32, -43, 54, 4, 54];
+// let arr = [2, 32, 23, -43, 22, 43, 32, -43, 54, 4, 54];
 
-const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
+// const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
 
    
     // let duplicateArray= duplicate
-let count= duplicate.filter((ele)=>ele>0|| ele<0).length
+// let count= duplicate.filter((ele)=>ele>0|| ele<0).length
    
 
 
 
-console.log(count);
+// console.log(count);
 
 
 

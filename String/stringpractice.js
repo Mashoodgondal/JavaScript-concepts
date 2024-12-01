@@ -152,4 +152,17 @@
 // for (let i of person) {
 //     console.log(i);
 // }
+const person = {
+    name: 'anas',
+    age: 23,
+    university: 'Riphah',
+    hobbies: ['sleeping', 'sleeping', 'sleeping'],
+    skillType:{
+        technical: ['python', 'java'],
+        nonTechnical: ['presentation', 'communication']
+    }
+}
+
+console.log(person?.skillType?.technical);
+
   

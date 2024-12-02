@@ -404,8 +404,8 @@
 // const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
 
    
-    // let duplicateArray= duplicate
-// let count= duplicate.filter((ele)=>ele>0|| ele<0).length
+//     let duplicateArray= duplicate
+// let count= duplicate.filter((ele)=>ele%2==0).length
    
 
 

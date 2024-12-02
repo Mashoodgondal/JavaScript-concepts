@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>wow!</h1>
+    <script>
+
+        var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
+        var date = new Date()
+        if (isNaN(dob.getTime())) {
+            alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
+        } else {
+            var milisecondAge = date.getTime() - dob.getTime()
+            var yearDiff = date.getFullYear() - dob.getFullYear();
+            var monthDiff = date.getMonth() - dob.getMonth();
+            var dayDiff = date.getDate() - dob.getDate();
+
+            alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

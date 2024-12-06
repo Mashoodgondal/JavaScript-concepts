@@ -152,17 +152,31 @@
 // for (let i of person) {
 //     console.log(i);
 // }
-const person = {
-    name: 'anas',
-    age: 23,
-    university: 'Riphah',
-    hobbies: ['sleeping', 'sleeping', 'sleeping'],
-    skillType:{
-        technical: ['python', 'java'],
-        nonTechnical: ['presentation', 'communication']
-    }
-}
+// const person = {
+//     name: 'anas',
+//     age: 23,
+//     university: 'Riphah',
+//     hobbies: ['sleeping', 'sleeping', 'sleeping'],
+//     skillType:{
+//         technical: ['python', 'java'],
+//         nonTechnical: ['presentation', 'communication']
+//     }
+// }
 
-console.log(person?.skillType?.technical);
+// console.log(person?.skillType?.technical);
 
+// ------------new line----------
+
+// var greet = "Hey\tman you \n are doing great!";
+// console.log(greet)
   
+
+// -------String length------
+
+
+// var greet = "Hey man you are doing great!";
+// console.log(greet.length)
+
+// ---------code at index------
+// var greet = "Hey mAn you are doing great!";
+// console.log(greet.charCodeAt(5));

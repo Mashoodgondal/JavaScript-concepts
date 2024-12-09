@@ -180,3 +180,23 @@
 // ---------code at index------
 // var greet = "Hey mAn you are doing great!";
 // console.log(greet.charCodeAt(5));
+
+// --------------Replace word in String---------
+// var greet = "Hey man you are doing great!a";
+
+// var man = greet.replace("man", "ahmad");
+// console.log(man);
+
+var x = "hey Man how are you"
+var result = ' '
+for (let i = 0; i < x.length; i++) {
+  if (x[i]===0|| x[i-1]==='') {
+    result += x.charAt[i].toUpperCase()
+  }
+    else{
+        result += x[i]
+    }
+}
+console.log(result);
+
+

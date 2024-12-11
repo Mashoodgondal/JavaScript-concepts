@@ -187,16 +187,36 @@
 // var man = greet.replace("man", "ahmad");
 // console.log(man);
 
-var x = "hey Man how are you"
-var result = ' '
-for (let i = 0; i < x.length; i++) {
-  if (x[i]===0|| x[i-1]==='') {
-    result += x.charAt[i].toUpperCase()
+// var x = " hey Man how are you"
+// var result = ' '
+// for (let i = 0; i < x.length; i++) {
+//   if (x[i]===0|| x[i-1]==='') {
+//     result += x.charAt[i].toUpperCase()
+//   }
+//     else{
+//         result += x[i]
+//     }
+// }
+// console.log(result);
+
+// -------------find fibonacy------------
+
+const fibonacy=(num)=>{
+  let firstNum= 0;
+  if(num==0){
+    return
   }
-    else{
-        result += x[i]
-    }
+  let secondNum = 1;
+  if (num==1) {
+    return
+  }
+  for (let i = 0; i < num; i++) {
+  let  thirdNum = firstNum+ secondNum;
+  console.log(" "+thirdNum);
+  
+   firstNum=secondNum
+   secondNum=thirdNum
+    
+  }
 }
-console.log(result);
-
-
+fibonacy(8)

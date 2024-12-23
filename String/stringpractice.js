@@ -32,7 +32,7 @@
 // for (let i = 0; i < fruits.length; i++) {
 //     const element = fruits[i];
 //     console.log(element);
-    
+
 // }
 
 // let fruits = ["Mango", "Banana", "Orange", "Pineapple"];
@@ -71,7 +71,7 @@
 // for (let i = 0; i < str.length; i++) {
 //     const element = str[i];
 //     console.log(element);
-    
+
 // }
 
 
@@ -107,7 +107,7 @@
 // return num1+num2
 // }
 // console.log(addition(4,"a"));
-  
+
 
 
 // let person= {
@@ -119,14 +119,14 @@
 
 // const someDetails=({name,age})=>{
 //     console.log(name,age);
-    
+
 // }
 // someDetails(person)
 
 
 // function fun2(){
 //     console.log("function2");
-    
+
 // }
 // function fun1(fun2){
 //     console.log("function1");
@@ -169,7 +169,7 @@
 
 // var greet = "Hey\tman you \n are doing great!";
 // console.log(greet)
-  
+
 
 // -------String length------
 
@@ -201,22 +201,38 @@
 
 // -------------find fibonacy------------
 
-const fibonacy=(num)=>{
-  let firstNum= 0;
-  if(num==0){
-    return
-  }
-  let secondNum = 1;
-  if (num==1) {
-    return
-  }
-  for (let i = 0; i < num; i++) {
-  let  thirdNum = firstNum+ secondNum;
-  console.log(" "+thirdNum);
-  
-   firstNum=secondNum
-   secondNum=thirdNum
-    
-  }
-}
-fibonacy(8)
+// const fibonacy=(num)=>{
+//   let firstNum= 0;
+//   if(num==0){
+//     return
+//   }
+//   let secondNum = 1;
+//   if (num==1) {
+//     return
+//   }
+//   for (let i = 0; i < num; i++) {
+//   let  thirdNum = firstNum+ secondNum;
+//   console.log(" "+thirdNum);
+
+//    firstNum=secondNum
+//    secondNum=thirdNum
+
+//   }
+// }
+// fibonacy(8)
+
+
+import mongoose from "mongoose";
+
+const connectionString = `mongodb+srv://${process.env.NEXT_ENV_USERNAME}:${process.env.NEXT_ENV_PASSWORD}@cluster1.siavy.mongodb.net/Todo?retryWrites=true&w=majority`;
+
+mongoose
+  .connect(connectionString, { serverSelectionTimeoutMS: 30000 })
+  .then(() => {
+    console.log("Connection successful!");
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error("Connection failed:", error.message);
+    process.exit(1);
+  });

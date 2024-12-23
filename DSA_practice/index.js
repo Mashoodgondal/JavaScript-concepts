@@ -28,3 +28,27 @@
 // let arr = [2, 4, 15, 34, 6, 4, 56]
 // let sum = arr.reduce((pre, cru) => pre + cru, 0)
 // console.log(sum);
+
+
+
+// -------------- 4.Find Factorial of a Number-----------
+
+// const Factorial = (n) => {
+//     for (let i = n; i > 0; i--) {
+//         return n * Factorial(n - 1)
+
+//     }
+//     return 1
+// }
+// Factorial(5)
+// console.log(Factorial(5));
+
+// -------- 5.Find the Missing Number in an Array--------
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 10]
+let n = 10
+let expectedSum = n * (n + 1) / 2
+let actualSum = arr.reduce((pre, cur) => pre + cur, 0)
+console.log(expectedSum - actualSum);
+
+
+

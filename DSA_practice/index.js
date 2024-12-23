@@ -44,11 +44,36 @@
 // console.log(Factorial(5));
 
 // -------- 5.Find the Missing Number in an Array--------
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 10]
-let n = 10
-let expectedSum = n * (n + 1) / 2
-let actualSum = arr.reduce((pre, cur) => pre + cur, 0)
-console.log(expectedSum - actualSum);
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 10]
+// let n = 10
+// let expectedSum = n * (n + 1) / 2
+// let actualSum = arr.reduce((pre, cur) => pre + cur, 0)
+// console.log(expectedSum - actualSum);
 
 
+// ------------ 6.Count Vowels in a String-------
+// const countVowels = (str) => {
+//     let count = 0;
+//     let Vowels = 'aeiou'
+//     for (const char of str) {
+//         if (Vowels.includes(char))
+//             count++
+//     }
+//     return count
+// }
+// console.log(countVowels('hy how are you'));
 
+
+let str = 'hallow world'
+const countVowels = (str) => {
+    const matches = str.match(/[aeiou]/g)
+    return matches ? matches.length : 0
+}
+console.log(countVowels('hallow world'));
+// function countVowels(str) {
+//     const matches = str.match(/[aeiouAEIOU]/g);
+//     return matches ? matches.length : 0;
+// }
+
+// // Example usage
+// console.log(countVowels("hello"));

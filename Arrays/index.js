@@ -4,21 +4,21 @@
 // for (let i = 0; i < 6; i++) {
 //    for (let j = 0; j < 5; j++) {
 //    str = str+'0'
-    
+
 //    }
 //     console.log(str);
 //     str=''
-    
+
 // }
 // let str=''
 // for (let i = 0; i < 6; i++) {
 //    for (let j = i; j < 5; j++) {
 //    str = str+'s'
-    
+
 //    }
 //     console.log(str);
 //     str=''
-    
+
 // }
 
 
@@ -56,9 +56,9 @@
 // for (let index = 0; index < arr.length; index++) {
 //     if (arr[index]<0) {
 //         console.log(arr[index]);
-        
+
 //     }
-    
+
 // }
 // -----------Positive Numbers-----------
 
@@ -66,9 +66,9 @@
 // for (let index = 0; index < arr.length; index++) {
 //     if (arr[index]>0) {
 //         console.log(arr[index]);
-        
+
 //     }
-    
+
 // }
 
 // ---------sum of Array----------
@@ -83,13 +83,13 @@
 
 // let array = [4, -1, -3, 7, 8, 2];
 // const countNegative=()=>{
-    
+
 //     let Count=0
 //    for (let i = 0; i < array.length; i++) {
 //     if (array[i]<0) {
 //       Count=  Count+1;
 //     }
-    
+
 //    }
 //    return Count
 
@@ -108,16 +108,23 @@
 
 // -------------------Array sorting manually----------------
 
-// let numbers = [-23,-324,34,234,23,334,78,34,6576];
+// let numbers = [-23, -324, 34, 234, 23, 334, 78, 34, 6576];
 // for (let i = 0; i < numbers.length; i++) {
-//     for (let j = 0; j < numbers.length-i; j++) {
-//         if (numbers[j]>numbers[j+1]) {
-//             let temp= numbers[j]
-//             numbers[j]=numbers[j+1]
-//             numbers[j+1]=temp
+//     for (let j = 0; j < numbers.length - i; j++) {
+//         if (numbers[j] > numbers[j + 1]) {
+//             let temp = numbers[j]
+//             numbers[j] = numbers[j + 1]
+//             numbers[j + 1] = temp
 //         }
-        
+
 //     }
-    
+
 // }
 // console.log(numbers);
+
+
+for (let i = 0; i < 100; i++) {
+    console.log(i, "I am a boy");
+
+
+}

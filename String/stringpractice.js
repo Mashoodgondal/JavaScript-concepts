@@ -188,51 +188,37 @@
 // console.log(man);
 
 // var x = " hey Man how are you"
-// var result = ' '
+// var result = ''
 // for (let i = 0; i < x.length; i++) {
-//   if (x[i]===0|| x[i-1]==='') {
+//   if (i == 0 || i - 1 == '') {
 //     result += x.charAt[i].toUpperCase()
 //   }
-//     else{
-//         result += x[i]
-//     }
+//   else {
+//     result += x[i]
+//   }
 // }
 // console.log(result);
 
 // -------------find fibonacy------------
 
-// const fibonacy=(num)=>{
-//   let firstNum= 0;
-//   if(num==0){
-//     return
-//   }
-//   let secondNum = 1;
-//   if (num==1) {
-//     return
-//   }
-//   for (let i = 0; i < num; i++) {
-//   let  thirdNum = firstNum+ secondNum;
-//   console.log(" "+thirdNum);
+const fibonacy = (num) => {
+  let firstNum = 0;
+  if (num == 0) {
+    return
+  }
+  let secondNum = 1;
+  if (num == 1) {
+    return
+  }
+  for (let i = 0; i < num; i++) {
+    let thirdNum = firstNum + secondNum;
+    console.log(" " + thirdNum);
 
-//    firstNum=secondNum
-//    secondNum=thirdNum
+    firstNum = secondNum
+    secondNum = thirdNum
 
-//   }
-// }
-// fibonacy(8)
+  }
+}
+fibonacy(6)
 
 
-import mongoose from "mongoose";
-
-const connectionString = `mongodb+srv://${process.env.NEXT_ENV_USERNAME}:${process.env.NEXT_ENV_PASSWORD}@cluster1.siavy.mongodb.net/Todo?retryWrites=true&w=majority`;
-
-mongoose
-  .connect(connectionString, { serverSelectionTimeoutMS: 30000 })
-  .then(() => {
-    console.log("Connection successful!");
-    process.exit(0);
-  })
-  .catch((error) => {
-    console.error("Connection failed:", error.message);
-    process.exit(1);
-  });

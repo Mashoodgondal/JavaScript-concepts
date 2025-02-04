@@ -4,7 +4,7 @@
 // console.log(maxNum);
 
 // 2--------- Check if a String is a Palindrome
-// let str = '3234'
+// let str = '323'
 // function reverseString(str) {
 //     let reversed = "";
 //     for (let i = str.length - 1; i >= 0; i--) {
@@ -44,8 +44,8 @@
 // console.log(Factorial(5));
 
 // -------- 5.Find the Missing Number in an Array--------
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 10]
-// let n = 10
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+// let n = 11
 // let expectedSum = n * (n + 1) / 2
 // let actualSum = arr.reduce((pre, cur) => pre + cur, 0)
 // console.log(expectedSum - actualSum);
@@ -64,16 +64,25 @@
 // console.log(countVowels('hy how are you'));
 
 
-let str = 'hallow world'
-const countVowels = (str) => {
-    const matches = str.match(/[aeiou]/g)
-    return matches ? matches.length : 0
-}
-console.log(countVowels('hallow world'));
+// let str = 'hallow world'
 // function countVowels(str) {
 //     const matches = str.match(/[aeiouAEIOU]/g);
 //     return matches ? matches.length : 0;
 // }
 
 // // Example usage
-// console.log(countVowels("hello"));
+// console.log(countVowels(str));
+
+
+// const sum = () => {
+//     for (let i = 0; i < arr.length; i++) {
+//         return arr[i] + arr[i + 1]
+
+//     }
+// }
+// 
+
+// console.log(sum(arr));
+let arr = [2, 4, 5, 6, 7, 8, 1]
+let arr2 = arr.reduce((pre, cru) => pre + cru)
+console.log(arr2);

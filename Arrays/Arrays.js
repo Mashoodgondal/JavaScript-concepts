@@ -236,21 +236,20 @@
 // for(let j=0 ; j<arr.length;j++)
 // for( let i=0;i>arr.length-j;i++){
 //     if(arr[i]>arr[i+1]){
-//         replace(arr[i],arr[i+1])
+//        replace(arr[i],arr[i+1])
 //     }
-   
+
 // }
+
 
 
 
 // For each method
 
-// let arr = [2, 3 ,4, 5];
-// let sum = 0;
-// arr.forEach(function(element) { 
-//     sum =+ element;
-// });
-//    console.log(sum);
+// let arr = [1, 1 ,1, 9];
+// // let sum = 0;
+//  let arr2 =arr.forEach((ele)=>ele*2)
+//    console.log(arr2);
 
 
 
@@ -399,13 +398,13 @@
 // console.log(duplicate)
 
 // ---------Count duplicate---------
-// let arr = [2, 32, 23, -43, 22, 43, 32, -43, 54, 4, 54];
+// let arr = [2, 32, 23, -43, 22, 43, 32,32, -43, 54, 4,4, 54];
 
 // const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
 
    
 //     let duplicateArray= duplicate
-// let count= duplicate.filter((ele)=>ele%2==0).length
+// let count= duplicate.filter((ele)=>ele>0||ele<0).length
    
 
 

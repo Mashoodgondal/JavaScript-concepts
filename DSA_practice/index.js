@@ -83,6 +83,20 @@
 // 
 
 // console.log(sum(arr));
-let arr = [2, 4, 5, 6, 7, 8, 1]
-let arr2 = arr.reduce((pre, cru) => pre + cru)
-console.log(arr2);
+// let arr = [2, 4, 5, 6, 7, 8, 1]
+// let arr2 = arr.reduce((pre, cru) => pre + cru)
+// console.log(arr2);
+var twoSum = function (arr, target) {
+
+    for (i = 1; i <= arr.length; i++) {
+        for (let j = i; j < arr.length; j++) {
+            if (arr[i] + arr[j] === target)
+                return [i, j]
+        }
+
+    }
+    return []
+}
+
+
+console.log(twoSum([1, 3, 4, 3, 6, 3, 6, 5, 4], 12));

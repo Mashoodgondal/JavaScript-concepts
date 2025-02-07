@@ -86,17 +86,22 @@
 // let arr = [2, 4, 5, 6, 7, 8, 1]
 // let arr2 = arr.reduce((pre, cru) => pre + cru)
 // console.log(arr2);
-var twoSum = function (arr, target) {
+// var twoSum = function (arr, target) {
 
-    for (i = 1; i <= arr.length; i++) {
-        for (let j = i; j < arr.length; j++) {
-            if (arr[i] + arr[j] === target)
-                return [i, j]
-        }
+//     for (i = 1; i <= arr.length; i++) {
+//         for (let j = i; j < arr.length; j++) {
+//             if (arr[i] + arr[j] === target)
+//                 return [i, j]
+//         }
 
-    }
-    return []
-}
+//     }
+//     return []
+// }
 
 
-console.log(twoSum([1, 3, 4, 3, 6, 3, 6, 5, 4], 12));
+// console.log(twoSum([1, 3, 4, 3, 6, 3, 6, 5, 4], 12));
+var arg = function (a, b, c) {
+    return arg.length;  // This returns the number of formal parameters (3 in this case)
+};
+
+console.log(arg(1, 2, 3));  // Output: 3

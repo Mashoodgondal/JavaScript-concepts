@@ -384,11 +384,13 @@
 
 // --------find duplicate---------
 
-// let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];
+let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 
 // const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index);
 
 // console.log(duplicate)
+const duplicate = (arr)=> new Set(arr).size !==arr.length
+console.log(duplicate);
 
 // ------------Delete All Duplicate--------
 // let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];

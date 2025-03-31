@@ -80,7 +80,7 @@
 
 //     }
 // }
-// 
+//
 
 // console.log(sum(arr));
 // let arr = [2, 4, 5, 6, 7, 8, 1]
@@ -100,8 +100,23 @@
 
 
 // console.log(twoSum([1, 3, 4, 3, 6, 3, 6, 5, 4], 12));
-var arg = function (a, b, c) {
-    return arg.length;  // This returns the number of formal parameters (3 in this case)
-};
+// var arg = function (a, b, c) {
+//     return arg.length;  // This returns the number of formal parameters (3 in this case)
+// };
 
-console.log(arg(1, 2, 3));  // Output: 3
+// console.log(arg(1, 2, 3));  // Output: 3
+
+// -------------------plus one at the end of array------------
+// var plusOne = function (digits) {
+//     for (let i = digits.length - 1; i >= 0; i) {
+//         if (digits[i] < 9) {
+//             digits[i]++;
+//             return digits
+//         }
+//         return digits[i] = 0
+//     }
+//     digits.unshift(1)
+//     return digits;
+// };
+// console.log(plusOne(1, 2, 3));
+

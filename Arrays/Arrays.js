@@ -389,8 +389,8 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index);
 
 // console.log(duplicate)
-const duplicate = (arr)=> new Set(arr).size !==arr.length
-console.log(duplicate);
+// const duplicate = (arr)=> new Set(arr).size !==arr.length
+// console.log(duplicate);
 
 // ------------Delete All Duplicate--------
 // let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 4, 5];
@@ -566,6 +566,32 @@ console.log(duplicate);
     
 // }
   
+
+// ---------------Binaty Search---------------
+
+// let array =[3,66,7,65,7,9,6,56,87,75]
+
+// let sortedArray = array.sort((a,b)=>a-b)
+// const binarySearch=(arr,target)=>{
+//     let left=0 
+//     let right = arr.length-1
+//     while (left<=right) {
+//         const mid = Math.floor((left+right)/2)
+//         if (arr[mid]===target) {
+//             return mid 
+//         }
+//         else if(arr[mid]<target){left= mid +1}
+//         else{
+        
+//             right=  mid-1 
+//         }
+        
+//     }
+// return -1 
+// }
+// console.log(sortedArray);
+
+// console.log(binarySearch(sortedArray,20));
 
 // ---------------Binaty Search---------------
 

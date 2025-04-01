@@ -120,3 +120,10 @@
 // };
 // console.log(plusOne(1, 2, 3));
 
+// Given an integer array nums and an integer k, return true if there are two distinct
+//   indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+let arr = [1, 2, 3, 4, 5]
+
+let nums = new Set(arr).size !== arr.length
+
+console.log(nums);

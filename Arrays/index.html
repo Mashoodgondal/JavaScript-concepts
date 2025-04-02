@@ -2,51 +2,112 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Encryption & Decryption</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .container {
+      background: #16213e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h2 {
+      color: #00d4ff;
+    }
+
+    input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background: #0f3460;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(45deg, #00d4ff, #8a2be2);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #8a2be2, #00d4ff);
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #00d4ff;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        width: 95%;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hy</h1>
+  <div class="container">
+    <h2>Text Encryption & Decryption</h2>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <input type="number" id="shiftInput" placeholder="Enter shift (e.g., 3)">
+    <button onclick="encryptText()">Encrypt</button>
+    <button onclick="decryptText()">Decrypt</button>
+    <h3>Result:</h3>
+    <p id="output"></p>
+  </div>
+
   <script>
+    function encryptText() {
+      let text = document.getElementById("textInput").value;
+      let shift = parseInt(document.getElementById("shiftInput").value);
+      let encryptedText = text.split("").map(char => {
+        let code = char.charCodeAt(0);
+        return String.fromCharCode(code + shift);
+      }).join("");
+      document.getElementById("output").innerText = "Encrypted: " + encryptedText;
+    }
 
-
-
-    // var time = prompt("Enter current Time");
-    // if (time >= 4 && time <= 9) {
-    //   alert("Good Morning");
-    // } else if (time >= 10 && time <= 16) {
-    //   alert("Good afternoon");
-    // } else if (time >= 17 && time <= 20) {
-    //   alert("Good evening");
-    // } else if (time >= 21 && time <= 24) {
-    //   alert("Good Night");
-    // } else {
-    //   alert("Plese enter time between 1 to 24");
-    // }
-
-    // let age = [21, -323, 34, 3, 342];
-    // let maxNum = Number.MIN_SAFE_INTEGER;
-    // for (let i = 0; i > age.length; i++) {
-    //   if (maxNum < age[i]) maxNum = age[i];
-    // }
-    // console.log(maxNum);
-
-    // const numbers = [10, 5, 20, 3, 8];
-    // const maxNumber = numbers.reduce(
-    //   (max, current) => (current > max ? current : max),
-    //   numbers[0]
-    // );
-
-    // console.log(maxNumber); // Output: 20
-    let arr = [3, 543, 2, 54, 4, 2, 5, 2, 5,]
-    const maximumNum = (arr) => {
-      return arr.reduce(function (pre, cru) {
-        return pre > cru ? pre : cru;
-      });
-    };
-    console.log(maximumNum);
+    function decryptText() {
+      let text = document.getElementById("textInput").value;
+      let shift = parseInt(document.getElementById("shiftInput").value);
+      let decryptedText = text.split("").map(char => {
+        let code = char.charCodeAt(0);
+        return String.fromCharCode(code - shift);
+      }).join("");
+      document.getElementById("output").innerText = "Decrypted: " + decryptedText;
+    }
   </script>
 </body>
 

@@ -122,8 +122,35 @@
 
 // Given an integer array nums and an integer k, return true if there are two distinct
 //   indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
-let arr = [1, 2, 3, 4, 5]
+// let arr = [1, 2, 3, 4, 5]
 
-let nums = new Set(arr).size !== arr.length
+// let nums = new Set(arr).size !== arr.length
 
-console.log(nums);
+// console.log(nums);
+
+//                    ------------------------
+// You are given an integer array height of length n. There are n vertical lines drawn
+//  such that the two endpoints of the ith line are (i, 0) and (i, height[i]).Find two lines that together
+//  with the x-axis form a container, such that the container contains the most water.
+//                    ------------------------
+
+var maxArea = function (height) {
+    let left = 0
+    let right = height.length - 1
+    let maxWater = 0
+    while (left < right) {
+        let minHight = Math.min(height[left], height[right])
+        let width = right - left
+        let area = minHight * width
+        maxWater = Math.max(maxWater, area)
+        if (height[left] < height[right]) {
+            left++;
+        }
+        else {
+            right--
+        }
+    }
+    return maxWater
+};
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+// console.log("Good thing is good");

@@ -174,3 +174,36 @@
 //     return maxWater
 // };
 // console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+
+                            //   ------------------------------
+//  Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that
+//  i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set
+//  must not contain duplicate triplets.
+                                //  -------------------------------
+var threeSum = function(nums) {
+    const map = new Map();
+for(let i=0; i<=nums.length;i++){
+    for(let j=i;j<nums.length;j++){
+        const complemnt=0-nums[i]-nums[j]
+        if(map.has(complemnt)){
+            return [map.get(complemnt),nums[i],nums[j]]
+        }
+        map.set(nums[i],nums[j])
+    }
+
+}
+return []
+                               
+};
+
+console.log(threeSum([-1,0,-1,2,-1,-4]));
+
+// for(let i=0;i<=nums.length;i++){
+//     const  complemnt =target- nums[i]
+//       if(map.has(complemnt)){
+//           return [map.get(complemnt),i]
+//       }
+//       map.set(nums[i],i)
+      
+//   }
+//   return [];

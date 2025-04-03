@@ -181,21 +181,35 @@
 //  must not contain duplicate triplets.
 //  -------------------------------
 
-var threeSum = function (nums) {
-    const map = new Map();
-    for (let i = 0; i <= nums.length; i++) {
-        for (let j = i; j < nums.length; j++) {
-            const complemnt = 0 - nums[i] - nums[j]
-            if (map.has(complemnt)) {
-                return [map.get(complemnt), nums[i], nums[j]]
-            }
-            map.set(nums[i], nums[j])
-        }
+var sortedArrayToBST = function (nums) {
+    if (nums.length === 0) return null; // Base case
 
-    }
-    return []
+    let mid = Math.floor(nums.length / 2); // Find middle element
 
+    return {
+        val: nums[mid], // Root node value
+        left: sortedArrayToBST(nums.slice(0, mid)), // Left subtree
+        right: sortedArrayToBST(nums.slice(mid + 1)) // Right subtree
+    };
 };
 
-console.log(threeSum([-1, 0, -1, 2, -1, -4]));
+
+
+// var threeSum = function (nums) {
+//     const map = new Map();
+//     for (let i = 0; i <= nums.length; i++) {
+//         for (let j = i; j < nums.length; j++) {
+//             const complemnt = 0 - nums[i] - nums[j]
+//             if (map.has(complemnt)) {
+//                 return [map.get(complemnt), nums[i], nums[j]]
+//             }
+//             map.set(nums[i], nums[j])
+//         }
+
+//     }
+//     return []
+
+// };
+
+// console.log(threeSum([-1, 0, -1, 2, -1, -4]));
 

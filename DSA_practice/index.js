@@ -221,6 +221,25 @@
 //                        --------------------------
 
 
+// var removeElement = function (nums, val) {
+//     let arrlength = nums.length
+//     for (let i = 0; i <= nums.length - 1; i++) {
+//         if (val === nums[i]) {
+//             nums.splice(i, 1)
+//             nums.push('_')
+//             i--
+//         }
+//     }
+//     while (nums.length < arrlength) {
+//         nums.push('_')
+//     }
+
+//     return nums
+
+// };
+
+// console.log(removeElement([3, 2, 2, 3, 4, 3], 2));
+
 var removeElement = function (nums, val) {
     let arrlength = nums.length
     for (let i = 0; i <= nums.length - 1; i++) {

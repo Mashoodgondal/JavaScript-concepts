@@ -181,17 +181,17 @@
 //  must not contain duplicate triplets.
 //  -------------------------------
 
-var sortedArrayToBST = function (nums) {
-    if (nums.length === 0) return null; // Base case
+// var sortedArrayToBST = function (nums) {
+//     if (nums.length === 0) return null; // Base case
 
-    let mid = Math.floor(nums.length / 2); // Find middle element
+//     let mid = Math.floor(nums.length / 2); // Find middle element
 
-    return {
-        val: nums[mid], // Root node value
-        left: sortedArrayToBST(nums.slice(0, mid)), // Left subtree
-        right: sortedArrayToBST(nums.slice(mid + 1)) // Right subtree
-    };
-};
+//     return {
+//         val: nums[mid], // Root node value
+//         left: sortedArrayToBST(nums.slice(0, mid)), // Left subtree
+//         right: sortedArrayToBST(nums.slice(mid + 1)) // Right subtree
+//     };
+// };
 
 
 
@@ -213,3 +213,27 @@ var sortedArrayToBST = function (nums) {
 
 // console.log(threeSum([-1, 0, -1, 2, -1, -4]));
 
+//                          --------------------
+// Input: nums = [3,2,2,3], val = 3
+// Output: 2, nums = [2,2,_,_]
+// Explanation: Your function should return k = 2, with the first two elements of nums being 2.
+// It does not matter what you leave beyond the returned k (hence they are underscores).
+//                        --------------------------
+
+
+var removeElement = function (nums, val) {
+    let arrlength = nums.length
+    for (let i = 0; i <= nums.length - 1; i++) {
+        if (val === nums[i]) {
+            nums.splice(i, 1)
+            nums.slice(i, 1)
+            i--
+        }
+    }
+    console.log(arrlength);
+
+    return nums
+
+};
+
+console.log(removeElement([3, 2, 2, 3, 4, 3], 2));

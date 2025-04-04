@@ -226,11 +226,13 @@ var removeElement = function (nums, val) {
     for (let i = 0; i <= nums.length - 1; i++) {
         if (val === nums[i]) {
             nums.splice(i, 1)
-            nums.slice(i, 1)
+            nums.push('_')
             i--
         }
     }
-    console.log(arrlength);
+    while (nums.length < arrlength) {
+        nums.push('_')
+    }
 
     return nums
 

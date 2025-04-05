@@ -241,6 +241,18 @@
 // console.log(removeElement([3, 2, 2, 3, 4, 3], 2));
 
 
+// var removeElement = function (nums, val) {
+//     let k = 0;
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] !== val) {
+//             nums[k] = nums[i];
+//             k++;
+//         }
+//     }
+
+//     return k; // ✅ Return number of remaining elements
+// };
 var removeElement = function (nums, val) {
     let k = 0;
 
@@ -253,3 +265,4 @@ var removeElement = function (nums, val) {
 
     return k; // ✅ Return number of remaining elements
 };
+

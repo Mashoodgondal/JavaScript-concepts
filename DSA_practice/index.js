@@ -253,40 +253,19 @@
 
 //     return k; // ✅ Return number of remaining elements
 // };
-var removeElement = function (nums, val) {
-    let k = 0;
+//                        ------------------
+//                        A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
 
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            nums[k] = nums[i];
-            k++;
-        }
-    }
+// For example, for arr = [1,2,3], the following are all the permutations of arr: [1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1].
+//                      --------------------
 
-    return k; // ✅ Return number of remaining elements
+var nextPermutation = function (nums) {
+
+    // for (let i = 0; i <= nums.length; i++) {
+    [nums[1], nums[2]] = [nums[2], nums[1]]
+
+
+    // }
+    return nums
 };
-var removeElement = function (nums, val) {
-    let k = 0;
-
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            nums[k] = nums[i];
-            k++;
-        }
-    }
-
-    return k; // ✅ Return number of remaining elements
-};
-var removeElement = function (nums, val) {
-    let k = 0;
-
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            nums[k] = nums[i];
-            k++;
-        }
-    }
-
-    return k; // ✅ Return number of remaining elements
-};
-
+console.log(nextPermutation([1, 2, 3]));

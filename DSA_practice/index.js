@@ -253,19 +253,26 @@
 
 //     return k; // ✅ Return number of remaining elements
 // };
-//                        ------------------
-//                        A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
+//                     --------------
+//     Input: nums = [1, 1, 2]
+// Output: 2, nums = [1, 2, _]
+// Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+// It does not matter what you leave beyond the returned k(hence they are underscores).
+//                   --------------
 
-// For example, for arr = [1,2,3], the following are all the permutations of arr: [1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1].
-//                      --------------------
+// var removeDuplicates = function (nums) {
+//     let duplicate = nums.filter((ele, index, arry) => arry.indexOf(ele) == index)
 
-var nextPermutation = function (nums) {
+//     return duplicate;
+// };
+// console.log(removeDuplicates([1, 1, 2, 2, 3, 4, 5, 4, 3, 2, 4]));
+var removeDuplicates = function (nums) {
+    let unique = [...new Set(nums)]
+    //     for(let i=0; i<=nums.length;i++){
+    //    let unique= new Set(ele)
 
-    // for (let i = 0; i <= nums.length; i++) {
-    [nums[1], nums[2]] = [nums[2], nums[1]]
-
-
-    // }
-    return nums
+    //     }
+    //    return unique
+    return unique
 };
-console.log(nextPermutation([1, 2, 3]));
+console.log(removeDuplicates([1, 1, 2]));

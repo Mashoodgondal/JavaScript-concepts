@@ -308,3 +308,10 @@ var merge = function (nums1) {
     return nums1;
 }
 console.log(merge([1, 1, 2, 3, 5, 3, 6, 3, 6]));
+var merge = function (nums1) {
+    for (let i = 0; i <= 1; i++) {
+        nums1[i].legth - i
+    }
+    return nums1;
+}
+console.log(merge([1, 1, 2, 3, 5, 3, 6, 3, 6]));

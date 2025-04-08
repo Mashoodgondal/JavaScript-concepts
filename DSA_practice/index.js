@@ -266,13 +266,23 @@
 //     return duplicate;
 // };
 // console.log(removeDuplicates([1, 1, 2, 2, 3, 4, 5, 4, 3, 2, 4]));
-var removeDuplicates = function (nums) {
-    let unique = [...new Set(nums)]
-    //     for(let i=0; i<=nums.length;i++){
-    //    let unique= new Set(ele)
+//   ========== 2 ========
+// var removeDuplicates = function (nums) {
+//     let unique = [...new Set(nums)]
 
-    //     }
-    //    return unique
-    return unique
-};
+//     return unique
+// };
+// console.log(removeDuplicates([1, 1, 2]));
+//    =========== 3 =============
+
+var removeDuplicates = function (nums) {
+    let newarr = []
+    for (let i = 0; i <= nums.length; i++) {
+        if (!newarr.includes(nums[i])) {
+            newarr.push(nums[i])
+        }
+
+    }
+    return newarr;
+}
 console.log(removeDuplicates([1, 1, 2]));

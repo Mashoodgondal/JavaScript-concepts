@@ -268,12 +268,14 @@
 // console.log(removeDuplicates([1, 1, 2, 2, 3, 4, 5, 4, 3, 2, 4]));
 //   ========== 2 ========
 // var removeDuplicates = function (nums) {
+//     let s = nums.sort((a,b) => a-b)
 
-//     let unique = new Set(nums)
+//     let unique = new Set(s)
 
 
 //     return unique
 // };
+
 // console.log(removeDuplicates([1, 1, 2, 2, 3, 4, 6, 6, 6, 2, 1, 0]));
 //    =========== 3 =============
 
@@ -291,27 +293,15 @@
 // }
 // console.log(removeDuplicates([1, 1, 2]));
 
-// nums2, n
+var removeDuplicates = function (nums) {
+    let obj = {}
+    for (let i = 0; i < nums.length; i++) {
+        if (!obj.nums[i]) {
+            obj.nums[i]
+        }
 
-var merge = function (nums1) {
-    for (let i = 0; i <= 1; i++) {
-        nums1[i].legth - i
     }
-    return nums1;
-}
-console.log(merge([1, 1, 2, 3, 5, 3, 6, 3, 6]));
+    return obj
 
-var merge = function (nums1) {
-    for (let i = 0; i <= 1; i++) {
-        nums1[i].legth - i
-    }
-    return nums1;
 }
-console.log(merge([1, 1, 2, 3, 5, 3, 6, 3, 6]));
-var merge = function (nums1) {
-    for (let i = 0; i <= 1; i++) {
-        nums1[i].legth - i
-    }
-    return nums1;
-}
-console.log(merge([1, 1, 2, 3, 5, 3, 6, 3, 6]));
+console.log(removeDuplicates([1, 1, 2]));

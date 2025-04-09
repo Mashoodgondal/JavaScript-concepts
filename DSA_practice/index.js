@@ -294,14 +294,13 @@
 // console.log(removeDuplicates([1, 1, 2]));
 
 var removeDuplicates = function (nums) {
-    let obj = {}
-    for (let i = 0; i < nums.length; i++) {
-        if (!obj.nums[i]) {
-            obj.nums[i]
+    let k = 1
+    for (let i = 0; i <= nums.length; i++) {
+        if (nums[i] !== nums[k - 1]) {
+            nums[k] = nums[i]
+            k++
         }
-
     }
-    return obj
-
+    return k
 }
-console.log(removeDuplicates([1, 1, 2]));
+console.log(removeDuplicates(1, 1, 2));

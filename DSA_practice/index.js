@@ -305,14 +305,17 @@
 // }
 // console.log(removeDuplicates(1, 1, 2));
 
+var printvar = function (nums, k, num1, m) {
 
-var printvar = function (nums, k) {
-    // return nums.length - 1
-    let k = 0
+    let narr = []
+    let narr1 = []
     for (let i = 0; i <= k; i++) {
-        return nums
+        narr.push(nums[i])
 
     }
-
+    for (let i = 0; i <= m; i++) {
+        narr1.push(num1[i])
+    }
+    return [...narr, ...narr1]
 }
-console.log(printvar([1, 2, 3, 4], k));
+console.log(printvar([1, 2, 3, 4], 2, [7, 6, 9, 4], 2));

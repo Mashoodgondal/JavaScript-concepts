@@ -319,3 +319,13 @@ var printvar = function (nums, k, num1, m) {
     return [...narr, ...narr1]
 }
 console.log(printvar([1, 2, 3, 4], 2, [7, 6, 9, 4], 2));
+let narr = []
+let narr1 = []
+for (let i = 0; i <= k; i++) {
+    narr.push(nums[i])
+
+}
+for (let i = 0; i <= m; i++) {
+    narr1.push(num1[i])
+}
+return [...narr, ...narr1]

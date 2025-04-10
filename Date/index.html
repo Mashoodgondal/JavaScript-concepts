@@ -4,116 +4,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vigenère Cipher Tool</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --dark: #0a1128;
+            --light: #f8f9fa;
+            --accent: #4fc3f7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--secondary);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .description {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #encryptBtn {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        #decryptBtn {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        #clearBtn {
+            background-color: #e0e0e0;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .history {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .history-item {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .history-item strong {
+            color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>wow!</h1>
+    <div class="container">
+        <h1>Vigenère Cipher Tool</h1>
+
+        <div class="description">
+            <p>The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic
+                substitution. Enter your text and a key below to encrypt or decrypt.</p>
+        </div>
+
+        <div class="input-group">
+            <label for="inputText">Text to Process:</label>
+            <textarea id="inputText" placeholder="Enter your plaintext or ciphertext here..."></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="key">Key:</label>
+            <input type="text" id="key" placeholder="Enter your encryption key (letters only)">
+        </div>
+
+        <div class="button-group">
+            <button id="encryptBtn">Encrypt</button>
+            <button id="decryptBtn">Decrypt</button>
+            <button id="clearBtn">Clear All</button>
+        </div>
+
+        <div class="result">
+            <label for="outputText">Result:</label>
+            <textarea id="outputText" readonly placeholder="Your result will appear here..."></textarea>
+        </div>
+
+        <div class="history">
+            <h3>Operation History</h3>
+            <div id="historyList"></div>
+        </div>
+
+        <footer>
+            <p>Vigenère Cipher Tool | Created with HTML, CSS, and JavaScript</p>
+        </footer>
+    </div>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputText = document.getElementById('inputText');
+            const keyInput = document.getElementById('key');
+            const outputText = document.getElementById('outputText');
+            const encryptBtn = document.getElementById('encryptBtn');
+            const decryptBtn = document.getElementById('decryptBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const historyList = document.getElementById('historyList');
 
-        var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-        var date = new Date()
-        if (isNaN(dob.getTime())) {
-            alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-        } else {
-            var milisecondAge = date.getTime() - dob.getTime()
-            var yearDiff = date.getFullYear() - dob.getFullYear();
-            var monthDiff = date.getMonth() - dob.getMonth();
-            var dayDiff = date.getDate() - dob.getDate();
+            let operationHistory = [];
 
+            // Encrypt function
+            function vigenereEncrypt(plaintext, key) {
+                let ciphertext = [];
+                key = key.toUpperCase().replace(/[^A-Z]/g, '');
 
-            alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
+                if (key.length === 0) {
+                    alert('Please enter a valid key (letters only)');
+                    return '';
+                }
 
-        }
+                let keyIndex = 0;
 
-        var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-        var date = new Date()
-        if (isNaN(dob.getTime())) {
-            alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-        } else {
-            var milisecondAge = date.getTime() - dob.getTime()
-            var yearDiff = date.getFullYear() - dob.getFullYear();
-            var monthDiff = date.getMonth() - dob.getMonth();
-            var dayDiff = date.getDate() - dob.getDate();
+                for (let i = 0; i < plaintext.length; i++) {
+                    const char = plaintext[i].toUpperCase();
 
+                    if (char >= 'A' && char <= 'Z') {
+                        const plainCode = char.charCodeAt(0) - 65;
+                        const keyCode = key[keyIndex % key.length].charCodeAt(0) - 65;
+                        const cipherCode = (plainCode + keyCode) % 26;
+                        ciphertext.push(String.fromCharCode(cipherCode + 65));
+                        keyIndex++;
+                    } else {
+                        ciphertext.push(char);
+                    }
+                }
 
-            alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
+                return ciphertext.join('');
+            }
 
-        }
-        var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-        var date = new Date()
-        if (isNaN(dob.getTime())) {
-            alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-        } else {
-            var milisecondAge = date.getTime() - dob.getTime()
-            var yearDiff = date.getFullYear() - dob.getFullYear();
-            var monthDiff = date.getMonth() - dob.getMonth();
-            var dayDiff = date.getDate() - dob.getDate();
+            // Decrypt function
+            function vigenereDecrypt(ciphertext, key) {
+                let plaintext = [];
+                key = key.toUpperCase().replace(/[^A-Z]/g, '');
 
+                if (key.length === 0) {
+                    alert('Please enter a valid key (letters only)');
+                    return '';
+                }
 
-            alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
+                let keyIndex = 0;
 
-        }
+                for (let i = 0; i < ciphertext.length; i++) {
+                    const char = ciphertext[i].toUpperCase();
 
+                    if (char >= 'A' && char <= 'Z') {
+                        const cipherCode = char.charCodeAt(0) - 65;
+                        const keyCode = key[keyIndex % key.length].charCodeAt(0) - 65;
+                        const plainCode = (cipherCode - keyCode + 26) % 26;
+                        plaintext.push(String.fromCharCode(plainCode + 65));
+                        keyIndex++;
+                    } else {
+                        plaintext.push(char);
+                    }
+                }
 
+                return plaintext.join('');
+            }
 
+            // Add to history
+            function addToHistory(operation, input, key, output) {
+                const timestamp = new Date().toLocaleString();
+                const historyItem = {
+                    operation,
+                    input,
+                    key,
+                    output,
+                    timestamp
+                };
+
+                operationHistory.unshift(historyItem);
+                renderHistory();
+            }
+
+            // Render history
+            function renderHistory() {
+                historyList.innerHTML = '';
+
+                operationHistory.slice(0, 5).forEach(item => {
+                    const historyElement = document.createElement('div');
+                    historyElement.className = 'history-item';
+                    historyElement.innerHTML = `
+                        <strong>${item.operation.toUpperCase()}</strong> at ${item.timestamp}<br>
+                        <strong>Key:</strong> ${item.key}<br>
+                        <strong>Input:</strong> ${truncateText(item.input, 30)}<br>
+                        <strong>Output:</strong> ${truncateText(item.output, 30)}
+                    `;
+                    historyList.appendChild(historyElement);
+                });
+            }
+
+            // Helper function to truncate text
+            function truncateText(text, maxLength) {
+                return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+            }
+
+            // Event listeners
+            encryptBtn.addEventListener('click', function () {
+                const text = inputText.value;
+                const key = keyInput.value;
+
+                if (!text || !key) {
+                    alert('Please enter both text and key');
+                    return;
+                }
+
+                const result = vigenereEncrypt(text, key);
+                outputText.value = result;
+                addToHistory('encrypt', text, key, result);
+            });
+
+            decryptBtn.addEventListener('click', function () {
+                const text = inputText.value;
+                const key = keyInput.value;
+
+                if (!text || !key) {
+                    alert('Please enter both text and key');
+                    return;
+                }
+
+                const result = vigenereDecrypt(text, key);
+                outputText.value = result;
+                addToHistory('decrypt', text, key, result);
+            });
+
+            clearBtn.addEventListener('click', function () {
+                inputText.value = '';
+                keyInput.value = '';
+                outputText.value = '';
+            });
+
+            // Allow only letters in key field
+            keyInput.addEventListener('input', function () {
+                this.value = this.value.replace(/[^a-zA-Z]/g, '');
+            });
+        });
     </script>
 </body>
 
 </html>
-
-
-<!-- 
-var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-var date = new Date()
-if (isNaN(dob.getTime())) {
-    alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-} else {
-    var milisecondAge = date.getTime() - dob.getTime()
-    var yearDiff = date.getFullYear() - dob.getFullYear();
-    var monthDiff = date.getMonth() - dob.getMonth();
-    var dayDiff = date.getDate() - dob.getDate();
-
-
-    alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
-
-} var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-var date = new Date()
-if (isNaN(dob.getTime())) {
-    alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-} else {
-    var milisecondAge = date.getTime() - dob.getTime()
-    var yearDiff = date.getFullYear() - dob.getFullYear();
-    var monthDiff = date.getMonth() - dob.getMonth();
-    var dayDiff = date.getDate() - dob.getDate();
-
-
-    alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
-
-} var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-var date = new Date()
-if (isNaN(dob.getTime())) {
-    alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-} else {
-    var milisecondAge = date.getTime() - dob.getTime()
-    var yearDiff = date.getFullYear() - dob.getFullYear();
-    var monthDiff = date.getMonth() - dob.getMonth();
-    var dayDiff = date.getDate() - dob.getDate();
-
-
-    alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
-
-} var dob = new Date(prompt("Enter date in the format YYYY-MM-DD."))
-var date = new Date()
-if (isNaN(dob.getTime())) {
-    alert("Invalid date format. Please enter a valid date in the format YYYY-MM-DD.");
-} else {
-    var milisecondAge = date.getTime() - dob.getTime()
-    var yearDiff = date.getFullYear() - dob.getFullYear();
-    var monthDiff = date.getMonth() - dob.getMonth();
-    var dayDiff = date.getDate() - dob.getDate();
-
-
-    alert(`You are ${yearDiff} years, ${monthDiff} months, and ${dayDiff} days old.`);
-
-} -->

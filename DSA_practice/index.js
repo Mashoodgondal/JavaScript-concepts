@@ -321,3 +321,37 @@ var printvar = function (nums, k, num1, m) {
     return sortedarr
 }
 console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+
+var printvar = function (nums, k, num1, m) {
+
+    let narr = []
+    let narr1 = []
+    for (let i = 0; i <= k; i++) {
+        narr.push(nums[i])
+
+    }
+    for (let i = 0; i <= m; i++) {
+        narr1.push(num1[i])
+    }
+    let finalArr = [...narr, ...narr1]
+    let sortedarr = finalArr.sort((a, b) => a - b)
+    return sortedarr
+}
+console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+
+var printvar = function (nums, k, num1, m) {
+
+    let narr = []
+    let narr1 = []
+    for (let i = 0; i <= k; i++) {
+        narr.push(nums[i])
+
+    }
+    for (let i = 0; i <= m; i++) {
+        narr1.push(num1[i])
+    }
+    let finalArr = [...narr, ...narr1]
+    let sortedarr = finalArr.sort((a, b) => a - b)
+    return sortedarr
+}
+console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));

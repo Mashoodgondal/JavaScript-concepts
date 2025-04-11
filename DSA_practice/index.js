@@ -309,11 +309,11 @@ var printvar = function (nums, k, num1, m) {
 
     let narr = []
     let narr1 = []
-    for (let i = 0; i <= k; i++) {
+    for (let i = 1; i <= k; i++) {
         narr.push(nums[i])
 
     }
-    for (let i = 0; i <= m; i++) {
+    for (let i = 1; i <= m; i++) {
         narr1.push(num1[i])
     }
     let finalArr = [...narr, ...narr1]

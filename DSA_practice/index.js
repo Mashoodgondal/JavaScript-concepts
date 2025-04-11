@@ -305,53 +305,43 @@
 // }
 // console.log(removeDuplicates(1, 1, 2));
 
-var printvar = function (nums, k, num1, m) {
+// var printvar = function (nums, k, num1, m) {
 
-    let narr = []
-    let narr1 = []
-    for (let i = 1; i <= k; i++) {
-        narr.push(nums[i])
+//     let narr = []
+//     let narr1 = []
+//     for (let i = 1; i <= k; i++) {
+//         narr.push(nums[i])
 
-    }
-    for (let i = 1; i <= m; i++) {
-        narr1.push(num1[i])
-    }
-    let finalArr = [...narr, ...narr1]
-    let sortedarr = finalArr.sort((a, b) => a - b)
-    return sortedarr
-}
-console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+//     }
+//     for (let i = 1; i <= m; i++) {
+//         narr1.push(num1[i])
+//     }
+//     let finalArr = [...narr, ...narr1]
+//     let sortedarr = finalArr.sort((a, b) => a - b)
+//     return sortedarr
+// }
+// console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
 
-var printvar = function (nums, k, num1, m) {
+var printvar = function (nums1, m, nums2, n) {
+    // Take the first `m` elements from nums1
+    let validNums1 = nums1.slice(0, m);
+    // Take the first `n` elements from nums2
+    let validNums2 = nums2.slice(0, n);
+    // Merge the two arrays
+    let merged = [...validNums1, ...validNums2].sort((a, b) => a - b);
 
-    let narr = []
-    let narr1 = []
-    for (let i = 0; i <= k; i++) {
-        narr.push(nums[i])
+    // Modify nums1 in-place by copying the merged elements
+    // for (let i = 0; i < merged.length; i++) {
+    //     nums1[i] = merged[i];
+    // }
+    // No return needed (nums1 is modified in-place)
+};
 
-    }
-    for (let i = 0; i <= m; i++) {
-        narr1.push(num1[i])
-    }
-    let finalArr = [...narr, ...narr1]
-    let sortedarr = finalArr.sort((a, b) => a - b)
-    return sortedarr
-}
-console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+// Example usage:
+let nums1 = [1, 2, 3, 0, 0, 0];
+let m = 3;
+let nums2 = [2, 5, 6];
+let n = 3;
 
-var printvar = function (nums, k, num1, m) {
-
-    let narr = []
-    let narr1 = []
-    for (let i = 0; i <= k; i++) {
-        narr.push(nums[i])
-
-    }
-    for (let i = 0; i <= m; i++) {
-        narr1.push(num1[i])
-    }
-    let finalArr = [...narr, ...narr1]
-    let sortedarr = finalArr.sort((a, b) => a - b)
-    return sortedarr
-}
-console.log(printvar([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+printvar(nums1, m, nums2, n);
+console.log(nums1); // Output: [1, 2, 2, 3, 5, 6]

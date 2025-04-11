@@ -368,3 +368,26 @@ let n = 3;
 
 printvar(nums1, m, nums2, n);
 console.log(nums1); // Output: [1, 2, 2, 3, 5, 6]
+var printvar = function (nums1, m, nums2, n) {
+    // Take the first `m` elements from nums1
+    let validNums1 = nums1.slice(0, m);
+    // Take the first `n` elements from nums2
+    let validNums2 = nums2.slice(0, n);
+    // Merge the two arrays
+    let merged = [...validNums1, ...validNums2].sort((a, b) => a - b);
+
+    // Modify nums1 in-place by copying the merged elements
+    // for (let i = 0; i < merged.length; i++) {
+    //     nums1[i] = merged[i];
+    // }
+    // No return needed (nums1 is modified in-place)
+};
+
+// Example usage:
+// let nums1 = [1, 2, 3, 0, 0, 0];
+// let m = 3;
+// let nums2 = [2, 5, 6];
+// let n = 3;
+
+// printvar(nums1, m, nums2, n);
+// console.log(nums1); // Output: [1, 2, 2, 3, 5, 6]

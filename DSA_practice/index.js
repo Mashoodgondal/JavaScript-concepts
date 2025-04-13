@@ -369,3 +369,19 @@ var combinationSum = function (candidates, target) {
 
     }
 };
+// -----------------------------   Input: candidates = [2,3,5], target = 8
+//------------------------------    Output: [[2,2,2,2],[2,3,3],[3,5]]         
+
+var combinationSum = function (candidates, target) {
+    while (target > 0) {
+
+    }
+};
+// -----------------------------   Input: candidates = [2,3,5], target = 8
+//------------------------------    Output: [[2,2,2,2],[2,3,3],[3,5]]         
+
+var combinationSum = function (candidates, target) {
+    while (target > 0) {
+
+    }
+};

@@ -385,3 +385,28 @@ var combinationSum = function (candidates, target) {
 
     }
 };
+// var removeDuplicates = function (nums) {
+//     let newarr = []
+//     for (let i = 0; i <= nums.length; i++) {
+//         if (newarr.includes(nums[i])) {
+//             newarr = []
+//         }
+//         else {
+//             newarr.push(nums[i])
+//         }
+//     }
+//     return newarr;
+// }
+// console.log(removeDuplicates([1, 1, 2]));
+
+// var removeDuplicates = function (nums) {
+//     let k = 1
+//     for (let i = 1; i < nums.length; i++) {
+//         if (nums[i] !== nums[k - 1]) {
+//             nums[k] = nums[i]
+//             k++
+//         }
+//     }
+//     return k
+// }
+// console.log(removeDuplicates(1, 1, 2));

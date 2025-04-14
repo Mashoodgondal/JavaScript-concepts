@@ -365,9 +365,16 @@
 // ----------------------Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]] 
 
 
-var subsets = function (nums) {
-    for (let i = 0; i <= nums.length; i++) {
+// var subsets = function (nums) {
+//     for (let i = 0; i <= nums.length; i++) {
 
-    }
-};
+//     }
+// };
 
+const originalArray = [1, 2, 3, 4];
+const splitArrays = [
+    originalArray.slice(0, 2),
+    originalArray.slice(2)
+];
+
+console.log(splitArrays); 

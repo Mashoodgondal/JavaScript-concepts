@@ -377,4 +377,17 @@ const splitArrays = [
     originalArray.slice(2)
 ];
 
-console.log(splitArrays); 
+// console.log(splitArrays);
+// const originalArray = [1, 2, 3, 4];
+// const splitArrays = [
+//     originalArray.slice(0, 2),
+//     originalArray.slice(2)
+// ];
+
+// console.log(splitArrays); const originalArray = [1, 2, 3, 4];
+// const splitArrays = [
+//     originalArray.slice(0, 2),
+//     originalArray.slice(2)
+// ];
+
+// console.log(splitArrays); 

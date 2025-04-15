@@ -362,62 +362,14 @@
 
 
 // ---------------------Input: nums = [1,2,3]
-// ----------------------Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]] 
+// ----------------------Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 
 
-// var subsets = function (nums) {
-//     for (let i = 0; i <= nums.length; i++) {
-
-//     }
-// };
-
-const originalArray = [1, 2, 3, 4];
-const splitArrays = [
-    originalArray.slice(0, 2),
-    originalArray.slice(2)
-];
-
-// console.log(splitArrays);
-// const originalArray = [1, 2, 3, 4];
-// const splitArrays = [
-//     originalArray.slice(0, 2),
-//     originalArray.slice(2)
-// ];
-
-// console.log(splitArrays); const originalArray = [1, 2, 3, 4];
-// const splitArrays = [
-//     originalArray.slice(0, 2),
-//     originalArray.slice(2)
-// ];
-
-// console.log(splitArrays);
-
-// console.log(splitArrays);
-// const originalArray = [1, 2, 3, 4];
-// const splitArrays = [
-//     originalArray.slice(0, 2),
-//     originalArray.slice(2)
-// ];
-
-// console.log(splitArrays); const originalArray = [1, 2, 3, 4];
-// const splitArrays = [
-//     originalArray.slice(0, 2),
-//     originalArray.slice(2)
-// ];
-
-// console.log(splitArrays);
-
-// console.log(splitArrays);
-// const originalArray = [1, 2, 3, 4];
-// const splitArrays = [
-//     originalArray.slice(0, 2),
-//     originalArray.slice(2)
-// ];
-
-// console.log(splitArrays); const originalArray = [1, 2, 3, 4];
-// const splitArrays = [
-//     originalArray.slice(0, 2),
-//     originalArray.slice(2)
-// ];
-
-// console.log(splitArrays); 
+var subsets = function (nums) {
+    let narr = []
+    for (let i = 0; i <= nums.length; i++) {
+        narr.push(nums)
+    }
+    return narr
+};
+console.log(subsets([1, 3, 4]));

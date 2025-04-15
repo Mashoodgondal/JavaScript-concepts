@@ -365,6 +365,22 @@
 // ----------------------Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 
 
+// var subsets = function (nums) {
+//     let narr = []
+//     for (let i = 0; i <= nums.length; i++) {
+//         narr.push(nums)
+//     }
+//     return narr
+// };
+// console.log(subsets([1, 3, 4]));
+var subsets = function (nums) {
+    let narr = []
+    for (let i = 0; i <= nums.length; i++) {
+        narr.push(nums)
+    }
+    return narr
+};
+console.log(subsets([1, 3, 4]));
 var subsets = function (nums) {
     let narr = []
     for (let i = 0; i <= nums.length; i++) {

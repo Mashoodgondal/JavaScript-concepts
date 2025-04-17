@@ -5,182 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vigenère Cipher Tool</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary: #4a6fa5;
-            --secondary: #166088;
-            --dark: #0a1128;
-            --light: #f8f9fa;
-            --accent: #4fc3f7;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--secondary);
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 10px;
-        }
-
-        .description {
-            background-color: #f0f8ff;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: var(--secondary);
-        }
-
-        textarea,
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 16px;
-            resize: vertical;
-        }
-
-        textarea {
-            min-height: 100px;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        #encryptBtn {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        #decryptBtn {
-            background-color: var(--secondary);
-            color: white;
-        }
-
-        #clearBtn {
-            background-color: #e0e0e0;
-        }
-
-        button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        .result {
-            margin-top: 20px;
-        }
-
-        .history {
-            margin-top: 30px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-
-        .history-item {
-            background-color: #f5f5f5;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .history-item strong {
-            color: var(--primary);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            .button-group {
-                flex-direction: column;
-            }
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
-<body>
-    <div class="container">
-        <h1>Vigenère Cipher Tool</h1>
-
-
-
-        <div class="input-group">
-            <label for="inputText">Text to Process:</label>
-            <textarea id="inputText" placeholder="Enter your plaintext or ciphertext here..."></textarea>
+<body class="bg-gray-50 min-h-screen py-8 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-4">
+            <h1 class="text-2xl sm:text-3xl font-bold text-white text-center">Vigenère Cipher Tool</h1>
         </div>
 
-        <div class="input-group">
-            <label for="key">Key:</label>
-            <input type="text" id="key" placeholder="Enter your encryption key (letters only)">
+        <!-- Main Content -->
+        <div class="p-6">
+            <!-- Description -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r px-4 py-3 mb-6">
+                <p class="text-blue-800">Enter your text and key below to encrypt or decrypt using the Vigenère cipher
+                    method.</p>
+            </div>
+
+            <!-- Input Fields -->
+            <div class="space-y-6">
+                <div>
+                    <label for="inputText" class="block text-sm font-medium text-gray-700 mb-1">Text to Process:</label>
+                    <textarea id="inputText" placeholder="Enter your plaintext or ciphertext here..."
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
+                        rows="5"></textarea>
+                </div>
+
+                <div>
+                    <label for="key" class="block text-sm font-medium text-gray-700 mb-1">Key:</label>
+                    <input type="text" id="key" placeholder="Enter your encryption key (letters only)"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="encryptBtn"
+                        class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-md">
+                        Encrypt
+                    </button>
+                    <button id="decryptBtn"
+                        class="flex-1 bg-blue-800 hover:bg-blue-900 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-md">
+                        Decrypt
+                    </button>
+                    <button id="clearBtn"
+                        class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-4 rounded-lg transition-colors duration-200">
+                        Clear All
+                    </button>
+                </div>
+
+                <!-- Result -->
+                <div>
+                    <label for="outputText" class="block text-sm font-medium text-gray-700 mb-1">Result:</label>
+                    <textarea id="outputText" readonly placeholder="Your result will appear here..."
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 shadow-sm"
+                        rows="5"></textarea>
+                </div>
+            </div>
+
+            <!-- History -->
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Operation History</h3>
+                <div id="historyList" class="space-y-3"></div>
+            </div>
         </div>
 
-        <div class="button-group">
-            <button id="encryptBtn">Encrypt</button>
-            <button id="decryptBtn">Decrypt</button>
-            <button id="clearBtn">Clear All</button>
+        <!-- Footer -->
+        <div class="bg-gray-100 px-6 py-4 text-center">
+            <p class="text-gray-600 text-sm">Vigenère Cipher Tool | Created with HTML, Tailwind CSS, and JavaScript</p>
         </div>
-
-        <div class="result">
-            <label for="outputText">Result:</label>
-            <textarea id="outputText" readonly placeholder="Your result will appear here..."></textarea>
-        </div>
-
-        <div class="history">
-            <h3>Operation History</h3>
-            <div id="historyList"></div>
-        </div>
-
-        <footer>
-            <p>Vigenère Cipher Tool | Created with HTML, CSS, and JavaScript</p>
-        </footer>
     </div>
 
     <script>
@@ -274,20 +175,20 @@
 
                 operationHistory.slice(0, 5).forEach(item => {
                     const historyElement = document.createElement('div');
-                    historyElement.className = 'history-item';
+                    historyElement.className = 'bg-gray-50 p-3 rounded-lg border border-gray-200';
                     historyElement.innerHTML = `
-                        <strong>${item.operation.toUpperCase()}</strong> at ${item.timestamp}<br>
-                        <strong>Key:</strong> ${item.key}<br>
-                        <strong>Input:</strong> ${truncateText(item.input, 30)}<br>
-                        <strong>Output:</strong> ${truncateText(item.output, 30)}
+                        <div class="flex justify-between items-start">
+                            <span class="font-medium text-blue-700">${item.operation.toUpperCase()}</span>
+                            <span class="text-xs text-gray-500">${item.timestamp}</span>
+                        </div>
+                        <div class="mt-2 text-sm">
+                            <p><span class="font-medium">Key:</span> ${item.key}</p>
+                            <p class="truncate"><span class="font-medium">Input:</span> ${item.input}</p>
+                            <p class="truncate"><span class="font-medium">Output:</span> ${item.output}</p>
+                        </div>
                     `;
                     historyList.appendChild(historyElement);
                 });
-            }
-
-            // Helper function to truncate text
-            function truncateText(text, maxLength) {
-                return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
             }
 
             // Event listeners

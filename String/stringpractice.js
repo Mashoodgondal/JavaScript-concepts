@@ -269,3 +269,19 @@ fibonacy(6)
 //   }
 // }
 // console.log(result);
+// console.log(result);// var greet = "Hey man you are doing great!a";
+
+// var man = greet.replace("man", "ahmad");
+// console.log(man);
+
+// var x = " hey Man how are you"
+// var result = ''
+// for (let i = 0; i < x.length; i++) {
+//   if (i == 0 || i - 1 == '') {
+//     result += x.charAt[i].toUpperCase()
+//   }
+//   else {
+//     result += x[i]
+//   }
+// }
+// console.log(result);

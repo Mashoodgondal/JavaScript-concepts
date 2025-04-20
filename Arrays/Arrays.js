@@ -213,7 +213,7 @@
 //     function fun2(){
 //         console.log('2nd')
 //     }
-// fun2()    
+// fun2()
 // }
 // fun1()
 
@@ -400,25 +400,18 @@
 // console.log(duplicate)
 
 // ---------Count duplicate---------
-// let arr = [2, 32, 23, -43, 22, 43, 32,32, -43, 54, 4,4, 54];
+let arr = [2, 32, 23, -43, 22, 43, 32, 32, -43, 54, 4, 4, 54];
 
-// const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
+const countDuplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index).length
 
-
-//     let duplicateArray= duplicate
-// let count= duplicate.filter((ele)=>ele>0||ele<0).length
-
-
-
-
-// console.log(count);
+console.log(countDuplicate);
 
 
 
 
 
 
-// MAP -- REDUCE -- FILTER 
+// MAP -- REDUCE -- FILTER
 
 // a)  MAP
 
@@ -573,21 +566,21 @@
 
 // let sortedArray = array.sort((a,b)=>a-b)
 // const binarySearch=(arr,target)=>{
-//     let left=0 
+//     let left=0
 //     let right = arr.length-1
 //     while (left<=right) {
 //         const mid = Math.floor((left+right)/2)
 //         if (arr[mid]===target) {
-//             return mid 
+//             return mid
 //         }
 //         else if(arr[mid]<target){left= mid +1}
 //         else{
 
-//             right=  mid-1 
+//             right=  mid-1
 //         }
 
 //     }
-// return -1 
+// return -1
 // }
 // console.log(sortedArray);
 
@@ -596,21 +589,8 @@
 
 // -----------Delete from specific position---------
 
-
-
-// let arr = [34, 45, 32, 4, 56, 2, 4, 53, 23, 32]
-// let pos = 4
-// if (arr.length > 0) {
+// const deluser = (arr, pos) => {
 //     arr.splice(pos, 1)
-//     console.log(arr);
-
+//     return arr
 // }
-// else {
-//     console.log("invalid position");
-
-// }
-const deluser = (arr, pos) => {
-    arr.splice(pos, 1)
-    return arr
-}
-console.log(deluser([1, 2, 3, 4, 5], 2));
+// console.log(deluser([1, 2, 3, 4, 5], 2));

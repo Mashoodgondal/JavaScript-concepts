@@ -106,7 +106,7 @@
 //     name: "ali",
 //         age: 32,
 //         height: 5
-    
+
 // }
 // let animal={
 //     type: 'cow',
@@ -138,7 +138,7 @@
 //     name: 'ali',
 //     age: '43',
 //     hobies:['hockey','love']
-     
+
 // }
 // let {name,age, hobies}=person;
 // console.log(name, age, hobies[1])
@@ -384,7 +384,7 @@
 
 // --------find duplicate---------
 
-let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
+// let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 
 // const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index);
 
@@ -404,10 +404,10 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 
 // const duplicate = arr.filter((ele,index,ary)=>ary.indexOf(ele)!==index)
 
-   
+
 //     let duplicateArray= duplicate
 // let count= duplicate.filter((ele)=>ele>0||ele<0).length
-   
+
 
 
 
@@ -456,9 +456,9 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // for (let index = 0; index < arr.length; index++) {
 //     if (arr[index]<0) {
 //         console.log(arr[index]);
-        
+
 //     }
-    
+
 // }
 // -----------Positive Numbers-----------
 
@@ -466,9 +466,9 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // for (let index = 0; index < arr.length; index++) {
 //     if (arr[index]>0) {
 //         console.log(arr[index]);
-        
+
 //     }
-    
+
 // }
 // ------Even Numbers from Arrays-----------
 
@@ -476,9 +476,9 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // for (let index = 0; index < arr.length; index++) {
 //     if (arr[index]%2==!1) {
 //         console.log(arr[index]);
-        
+
 //     }
-    
+
 // }
 
 // ---------sum of Array----------
@@ -501,13 +501,13 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 
 
 // const countNegative=()=>{
-    
+
 //     let Count=0
 //    for (let i = 0; i < array.length; i++) {
 //     if (array[i]<0) {
 //       Count=  Count+1;
 //     }
-    
+
 //    }
 //    return Count
 
@@ -527,10 +527,10 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // -------------Count all odd Numbers----------
 
 // let arr = [34,45,32,4,56,2,4,53,23,32]
- // let count=0
+// let count=0
 // const countOdd =()=>{
 //     for (let i = 0; i < arr.length; i++) {
-      
+
 //         if(arr[i]%2!==0){
 //             count=count+1
 //         }
@@ -543,11 +543,11 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // if(arr.length>0){
 //   arr.splice(4,1)
 //   console.log(arr);
-  
+
 // }
 // else{
 //     console.log("invalid position");
-    
+
 // }
 
 // ----------sort Array---------
@@ -563,9 +563,9 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // let arr=[2,34,43,5,3,5]
 // for( const val of arr){
 //     console.log(val);
-    
+
 // }
-  
+
 
 // ---------------Binaty Search---------------
 
@@ -582,10 +582,10 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 //         }
 //         else if(arr[mid]<target){left= mid +1}
 //         else{
-        
+
 //             right=  mid-1 
 //         }
-        
+
 //     }
 // return -1 
 // }
@@ -596,22 +596,21 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 
 // -----------Delete from specific position---------
 
-const delUserPosition=(arr,num)=>{
-if(arr>0){
-    arr.splice(num,1)
-}
-return  arr
-}
-console.log(delUserPosition([1,2,4,6,7,8,9],1));
 
 
-// let arr = [34,45,32,4,56,2,4,53,23,32]
-// if(arr.length>0){
-//   arr.splice(4,1)
-//   console.log(arr);
-  
+// let arr = [34, 45, 32, 4, 56, 2, 4, 53, 23, 32]
+// let pos = 4
+// if (arr.length > 0) {
+//     arr.splice(pos, 1)
+//     console.log(arr);
+
 // }
-// else{
+// else {
 //     console.log("invalid position");
-    
+
 // }
+const deluser = (arr, pos) => {
+    arr.splice(pos, 1)
+    return arr
+}
+console.log(deluser([1, 2, 3, 4, 5], 2));

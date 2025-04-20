@@ -594,3 +594,24 @@ let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54,32, 4, 5];
 // console.log(binarySearch(sortedArray,20));
 
 
+// -----------Delete from specific position---------
+
+const delUserPosition=(arr,num)=>{
+if(arr>0){
+    arr.splice(num,1)
+}
+return  arr
+}
+console.log(delUserPosition([1,2,4,6,7,8,9],1));
+
+
+// let arr = [34,45,32,4,56,2,4,53,23,32]
+// if(arr.length>0){
+//   arr.splice(4,1)
+//   console.log(arr);
+  
+// }
+// else{
+//     console.log("invalid position");
+    
+// }

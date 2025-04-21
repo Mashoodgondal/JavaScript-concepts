@@ -222,3 +222,32 @@ const fibonacy = (num) => {
 fibonacy(6)
 
 
+//  ------------Iterables----------------
+
+// let str = 'abc';
+// for (let char of str) {
+//     console.log(char);
+// }
+
+
+// const person = {
+//     name: 'anas',
+//     age: 24,
+//     degree: 'bscs'
+// }
+
+// for (let i of person) {
+//     console.log(i);
+// }
+// const person = {
+//     name: 'anas',
+//     age: 23,
+//     university: 'Riphah',
+//     hobbies: ['sleeping', 'sleeping', 'sleeping'],
+//     skillType:{
+//         technical: ['python', 'java'],
+//         nonTechnical: ['presentation', 'communication']
+//     }
+// }
+
+// console.log(person?.skillType?.technical);

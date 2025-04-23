@@ -221,3 +221,8 @@ console.log("Year:", rightNow.getFullYear());
 // var yearDif = date.getFullYear()-dob.getFullYear()
 // var monthdif = date.getMonth()-dob.getMonth()
 // var day =   date.getDay()-dob.getDay()
+// var milisecondAge = date.getTime()- dob.getTime()
+// // var yearDif = milisecondAge/(1000*60*60*24*365)
+// var yearDif = date.getFullYear()-dob.getFullYear()
+// var monthdif = date.getMonth()-dob.getMonth()
+// var day =   date.getDay()-dob.getDay()

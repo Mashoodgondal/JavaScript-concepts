@@ -37,4 +37,13 @@
 
 // ============Given an array nums of size n, return the majority element
 // ===============Input: nums = [3,2,3]
-// ===============Output: 3
+// ===============Output: 3/     for (let i = 0; i <= nums.length; i++) {
+//         for (let j = 1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] === target) {
+//                 return [i, j]
+//             }
+//         }
+//     }
+
+// };
+// console.log(twoSum([1, 3, 4, 6, 7, 9], 10));

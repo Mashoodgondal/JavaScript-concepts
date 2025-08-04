@@ -196,6 +196,20 @@
 // console.log(grouped(array1,array2));
 
 
+// });
+// array2.forEach(element => {
+//     if (element%2==0) {
+//         group.eve.push(element)
+//     }
+//     else{
+//         group.odd.push(element)
+//     }
+// });
+// return group
+// }
+// console.log(grouped(array1,array2));
+
+
 
 
 

@@ -116,32 +116,32 @@
 
 // Write a function to group elements of an array based on a specific condition (e.g., group numbers by even and odd).
 
-let array1 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
-let array2 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
-const grouped = (array1, array2) => {
-    const group = {
-        eve: [],
-        odd: []
-    }
-    array1.forEach(element => {
-        if (element % 2 == 0) {
-            group.eve.push(element)
-        }
-        else {
-            group.odd.push(element)
-        }
-    });
-    array2.forEach(element => {
-        if (element % 2 == 0) {
-            group.eve.push(element)
-        }
-        else {
-            group.odd.push(element)
-        }
-    });
-    return group
-}
-console.log(grouped(array1, array2));
+// let array1 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
+// let array2 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
+// const grouped = (array1, array2) => {
+//     const group = {
+//         eve: [],
+//         odd: []
+//     }
+//     array1.forEach(element => {
+//         if (element % 2 == 0) {
+//             group.eve.push(element)
+//         }
+//         else {
+//             group.odd.push(element)
+//         }
+//     });
+//     array2.forEach(element => {
+//         if (element % 2 == 0) {
+//             group.eve.push(element)
+//         }
+//         else {
+//             group.odd.push(element)
+//         }
+//     });
+//     return group
+// }
+// console.log(grouped(array1, array2));
 
 
 
@@ -180,6 +180,20 @@ console.log(grouped(array1, array2));
 // console.log(grouped(array1,array2));
 
 
+
+
+// });
+// array2.forEach(element => {
+//     if (element%2==0) {
+//         group.eve.push(element)
+//     }
+//     else{
+//         group.odd.push(element)
+//     }
+// });
+// return group
+// }
+// console.log(grouped(array1,array2));
 
 
 

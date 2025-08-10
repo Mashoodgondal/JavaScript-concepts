@@ -101,7 +101,7 @@
 
 
 
-# fin factorial of the number
+# find factorial of the number
 # num = int(input("Enter a number: "))
 # other =1
 # i=1 
@@ -111,11 +111,38 @@
 # print(f"factorial is {other}")
 
 
-def fib(n):
-    if n <= 1:
-        return n
-    return fib(n-1) + fib(n-2)
+# def fib(n):
+#     if n <= 1:
+#         return n
+#     return fib(n-1) + fib(n-2)
+# for i in range(10):
+#  print(fib(i), end=" ")
 
-# Print first 10 Fibonacci numbers
-for i in range(10):
-    print(fib(i), end=" ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# earth_weight = input("Enter Earth weight  ")
+# earth_weight= float(earth_weight)
+# gravity_ratios={
+#     "Mercury": 0.38,
+#         "Venus": 0.91,
+#         "Mars": 0.38,
+#         "Jupiter": 2.34,
+#         "Saturn": 1.06,
+#         "Uranus": 0.92,
+#         "Neptune": 1.19,
+#         "Pluto": 0.06

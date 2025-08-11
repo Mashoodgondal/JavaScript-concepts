@@ -122,8 +122,18 @@
 
 # LIST IN PYTHON
 
-fruit =["apple","bnana","mengo"]
-print(fruit)
-fruit.append('orange')
-fruit[1]="kewi"
-print(fruit)
+# fruit =["apple","bnana","mengo"]
+# print(fruit)
+# fruit.append('orange')
+# fruit[1]="kewi"
+# print(fruit)
+
+
+
+
+# TUPLE IN PYTHON
+
+
+numbers =(2,5,5,6,7)
+print(numbers)
+print(numbers[1])

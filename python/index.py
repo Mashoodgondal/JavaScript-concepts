@@ -141,7 +141,14 @@
 
 # SETS IN PYTHON
 
-unique_number = {2,5,4,3,5,3,4,5,6,7,6}
-print(unique_number)
-print(0 in unique_number)
-print(4 in unique_number)
+# unique_number = {2,5,4,3,5,3,4,5,6,7,6}
+# print(unique_number)
+# print(0 in unique_number)
+# print(4 in unique_number)
+
+
+# DICTIONARY IN PYHTON
+
+student = {"name": "Alice", "age": 25, "courses": ["Math", "Science"]}
+student["age"] = 26  # Update value
+print(student["courses"])  # Output: "Alice"

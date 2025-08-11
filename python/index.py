@@ -120,28 +120,10 @@
 
 
 
+# LIST IN PYTHON
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# earth_weight = input("Enter Earth weight  ")
-# earth_weight= float(earth_weight)
-# gravity_ratios={
-#     "Mercury": 0.38,
-#         "Venus": 0.91,
-#         "Mars": 0.38,
-#         "Jupiter": 2.34,
-#         "Saturn": 1.06,
-#         "Uranus": 0.92,
-#         "Neptune": 1.19,
-#         "Pluto": 0.06
+fruit =["apple","bnana","mengo"]
+print(fruit)
+fruit.append('orange')
+fruit[1]="kewi"
+print(fruit)

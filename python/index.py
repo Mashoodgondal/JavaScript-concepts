@@ -149,6 +149,15 @@
 
 # DICTIONARY IN PYHTON
 
-student = {"name": "Alice", "age": 25, "courses": ["Math", "Science"]}
-student["age"] = 26  # Update value
-print(student["courses"])  # Output: "Alice"
+# student = {"name": "Alice", "age": 25, "courses": ["Math", "Science"]}
+# student["age"] = 26  # Update value
+# print(student["courses"])  # Output: "Alice"
+
+
+# REMOVE DUPLICATE OF LIST
+
+
+numbers = [3,5,6,4,6,34,2,1,6,7,8]
+unique = list(set(numbers))
+print(numbers)
+print(unique)

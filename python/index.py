@@ -165,7 +165,13 @@
 
 # COMBINE LIST 
 
-keys1 = ["name", "age","habits"]
-values = ["Bob", 30,["hockey","cirket"]]
-person = dict(zip(keys1, values))
-print(person)  # Output: {"name": "Bob", "age": 30}
+# keys1 = ["name", "age","habits"]
+# values = ["Bob", 30,["hockey","cirket"]]
+# person = dict(zip(keys1, values))
+# print(person)  # Output: {"name": "Bob", "age": 30}
+
+
+# FAST LOOCKUP
+
+usernames = {"alice", "bob", "charlie"}
+print("alice" in usernames)  # Output: True (O(1) time)

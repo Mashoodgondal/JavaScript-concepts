@@ -157,7 +157,15 @@
 # REMOVE DUPLICATE OF LIST
 
 
-numbers = [3,5,6,4,6,34,2,1,6,7,8]
-unique = list(set(numbers))
-print(numbers)
-print(unique)
+# numbers = [3,5,6,4,6,34,2,1,6,7,8]
+# unique = list(set(numbers))
+# print(numbers)
+# print(unique)
+
+
+# COMBINE LIST 
+
+keys1 = ["name", "age","habits"]
+values = ["Bob", 30,["hockey","cirket"]]
+person = dict(zip(keys1, values))
+print(person)  # Output: {"name": "Bob", "age": 30}

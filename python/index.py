@@ -134,6 +134,14 @@
 # TUPLE IN PYTHON
 
 
-numbers =(2,5,5,6,7)
-print(numbers)
-print(numbers[1])
+# numbers =(2,5,5,6,7)
+# print(numbers)
+# print(numbers[1])
+
+
+# SETS IN PYTHON
+
+unique_number = {2,5,4,3,5,3,4,5,6,7,6}
+print(unique_number)
+print(0 in unique_number)
+print(4 in unique_number)

@@ -1,10 +1,13 @@
 # STEP BY STEP ASSIGNMENT TO LEARN PYTHON
 
+# FUNCTION TO ADD NUMBERS
 
-# Function with multiple parameters
-def add_numbers(a, b):  # a and b are parameters
-    return a + b
+# def add_numbers(a, b): 
+#     return a + b
+# result = add_numbers(5, 3)  
+# print(result)
 
-# Calling with arguments
-result = add_numbers(5, 3)  # 5 and 3 are arguments
-print(result)  # Output: 8
+# FUNCTOIN TO FIND POWER
+def find_power(a,b):
+    return a ** b
+print(find_power(4,5))

@@ -21,7 +21,7 @@
 # INDEXING AND SLICING
 
 
-fruits = ["apple", "banana", "cherry", "date"]
+# fruits = ["apple", "banana", "cherry", "date"]
 
 # Indexing (starts at 0)
 # print(fruits[0]) 
@@ -37,3 +37,19 @@ fruits = ["apple", "banana", "cherry", "date"]
 # fruits.insert(1, "berry")  # Inserts at index 1
 # fruits.pop(2)              # Removes item at index 2
 # fruits.sort()              # Sorts alphabetically
+# print(fruits)
+
+
+fruits = ["apple", "banana", "cherry", "date"]
+# -------------How do you access the last element of a list?
+
+# print(fruits[-1])
+
+# ---------------Write a code to reverse a list without using reverse().
+
+# print(fruits[::-1])
+
+# -----------------How do you remove "banana" from fruits using remove()?
+
+fruits.pop(1)
+print(fruits)

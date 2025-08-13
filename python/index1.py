@@ -18,37 +18,22 @@
 
 
 
+# INDEXING AND SLICING
 
 
+fruits = ["apple", "banana", "cherry", "date"]
+
+# Indexing (starts at 0)
+# print(fruits[0]) 
+# print(fruits[-1])
 
 
+# # Slicing [start:end:step]
+# print(fruits[1:3])  # ["banana", "cherry"]
+# print(fruits[0:2:1])   # ["apple", "cherry"]
 
-
-
-
-# # Function with multiple parameters
-# def add_numbers(a, b):  # a and b are parameters
-#     return a + b
-
-# # Calling with arguments
-# result = add_numbers(5, 3)  # 5 and 3 are arguments
-# print(result)  # Output: 8
-# Function with multiple parameters
-def add_numbers(a, b):  # a and b are parameters
-    return a + b
-
-# Calling with arguments
-result = add_numbers(5, 3)  # 5 and 3 are arguments
-print(result)  # Output: 8# Function with multiple parameters
-def add_numbers(a, b):  # a and b are parameters
-    return a + b
-
-# Calling with arguments
-result = add_numbers(5, 3)  # 5 and 3 are arguments
-print(result)  # Output: 8# Function with multiple parameters
-def add_numbers(a, b):  # a and b are parameters
-    return a + b
-
-# Calling with arguments
-result = add_numbers(5, 3)  # 5 and 3 are arguments
-print(result)  # Output: 8
+# # Modifying
+# fruits.append("fig")       # Adds at the end
+# fruits.insert(1, "berry")  # Inserts at index 1
+# fruits.pop(2)              # Removes item at index 2
+# fruits.sort()              # Sorts alphabetically

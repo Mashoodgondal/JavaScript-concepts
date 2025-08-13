@@ -51,5 +51,24 @@ fruits = ["apple", "banana", "cherry", "date"]
 
 # -----------------How do you remove "banana" from fruits using remove()?
 
-fruits.pop(1)
-print(fruits)
+# fruits.pop(1)
+# print(fruits)
+
+
+    # DICTIONARIES]
+
+        # Creating a dictionary
+student = {"name": "Alice", "age": 21, "courses": ["Math", "Science"]}
+
+# Accessing values
+# print(student["name"])  # "Alice"
+# print(student.get("age"))  # 21 (safer, returns None if key missing)
+
+# # Modifying
+# student["age"] = 22  # Updates age
+student.update({"age": 23, "gender": "F"})  # Updates multiple keys
+# print(student)
+# Looping
+# for key, value in student.items():
+#     print(f"{key}: {value}")
+print()

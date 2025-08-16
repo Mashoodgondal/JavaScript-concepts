@@ -58,7 +58,7 @@ fruits = ["apple", "banana", "cherry", "date"]
     # DICTIONARIES]
 
         # Creating a dictionary
-student = {"name": "Alice", "age": 21, "courses": ["Math", "Science"]}
+# student = {"name": "Alice", "age": 21, "courses": ["Math", "Science"]}
 
 # Accessing values
 # print(student["name"])  # "Alice"
@@ -66,11 +66,36 @@ student = {"name": "Alice", "age": 21, "courses": ["Math", "Science"]}
 
 # # Modifying
 # student["age"] = 22  # Updates age
-student.update({"age": 23, "gender": "F"})  # Updates multiple keys
+# student.update({"age": 23, "gender": "F"})  # Updates multiple keys
 # print(student)
 # Looping
 # for key, value in student.items():
 #     print(f"{key}: {value}")
-print()
+# print()
 
 
+
+
+
+
+# -----------Type Hint and Annomation In Python
+
+
+# Basic types
+name: str = "Alice"
+age: int = 25
+height: float = 5.9
+is_active: bool = True
+
+# List and Dict (need to import from typing)
+from typing import List, Dict, Optional
+
+names: List[str] = ["Alice", "Bob", "Charlie"]
+scores: Dict[str, int] = {"Alice": 90, "Bob": 85}
+
+# Optional (value can be type or None)
+nickname: Optional[str] = None
+
+# Function example
+def greet(name: str, age: int) -> str:
+    return f"Hello {name}, you are {age} years old"

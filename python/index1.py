@@ -99,3 +99,24 @@ nickname: Optional[str] = None
 # Function example
 def greet(name: str, age: int) -> str:
     return f"Hello {name}, you are {age} years old"
+
+
+
+
+name: str = "Alice"
+age: int = 25
+height: float = 5.9
+is_active: bool = True
+
+# List and Dict (need to import from typing)
+from typing import List, Dict, Optional
+
+names: List[str] = ["Alice", "Bob", "Charlie"]
+scores: Dict[str, int] = {"Alice": 90, "Bob": 85}
+
+# Optional (value can be type or None)
+nickname: Optional[str] = None
+
+# Function example
+def greet(name: str, age: int) -> str:
+    return f"Hello {name}, you are {age} years old"

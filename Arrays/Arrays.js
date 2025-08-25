@@ -608,30 +608,3 @@ console.log(deluser([1, 2, 3, 4, 5], 2));
 // }
 // console.log(sortedArray);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let array =[3,66,7,65,7,9,6,56,87,75]
-
-// let s

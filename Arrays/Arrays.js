@@ -251,10 +251,10 @@
 
 // Map method
 
-let arr = [1, 1, 1, 9];
-// let sum = 0;
-let arr2 = arr.map((ele) => ele * 2)
-console.log(arr2);
+// let arr = [1, 1, 1, 9];
+// // let sum = 0;
+// let arr2 = arr.map((ele) => ele * 2)
+// console.log(arr2);
 
 
 
@@ -274,18 +274,17 @@ console.log(arr2);
 
 // this method is used to perform any operation on Array
 
-// let arr=[4,6,7,4,12]
-// const sum= arr.reduce((first,second) => first+second)
+// let arr = [4, 6, 7, 4, 12]
+// const sum = arr.reduce((first, second) => first + second)
 // console.log(sum);
 
 // let bickes = [
-//     {bik: 1,bikname:'roadprince', price: 60},
-//     {bik:2,bikname: 'honda', price: 80},
-//     {bik:3,bikname:'haveybike', price:  120},
-//      ]
+//     { bik: 1, bikname: 'roadprince', price: 60 },
+//     { bik: 2, bikname: 'honda', price: 80 },
+//     { bik: 3, bikname: 'haveybike', price: 120 },
+// ]
 
-
-// const totalPrice = bickes.reduce((a,b) => a + b.price, 0 );
+// const totalPrice = bickes.reduce((a, b) => a + b.price, 0);
 // console.log(totalPrice);
 
 
@@ -311,28 +310,28 @@ console.log(arr2);
 
 // Every
 
-// let numbers=[2,34,56,3,245,56,54]
-// const positiveNumbers=numbers.every((num)=>num>0)
+// let numbers = [2, 34, 56, 3, 245, 56, 54]
+// const positiveNumbers = numbers.every((num) => num > 0)
 // console.log(positiveNumbers);
 
 // some
 
-// let numbers=[2,34,-56,3,-5,56,54]
-// const positiveNumbers=numbers.some((num)=>num>0)
+// let numbers = [2, 34, -56, 3, -5, 56, 54]
+// const positiveNumbers = numbers.some((num) => num > 0)
 // console.log(positiveNumbers);
 
 // fill
 
-// let arr=[2,34,567,43,34,5,54,2,44,5]
-// const numbers=arr.fill('q',2,5)
+// let arr = [2, 34, 567, 43, 34, 5, 54, 2, 44, 5]
+// const numbers = arr.fill('q', 2, 5)
 // console.log(numbers);
 
 // Spice
 
-// const arr=[23,43,4,3,13254,6,8,4,6,78,5,]
-// arr.splice(2,3, 'art')
-// arr.splice( 6,2, 'ase')
-// console.log(arr);
+const arr = [23, 43, 4, 3, 13254, 6, 8, 4, 6, 78, 5,]
+arr.splice(2, 1, 'art')
+arr.splice(6, 2, 'ase')
+console.log(arr);
 
 
 

@@ -47,11 +47,14 @@
 // Find maximum from Array
 // Formula: Maximum  =  Numbar.MIN_SAFE_INTEGER;
 
-// let age =[304,455,57,900,68,740];
-// let maximum=Number.MIN_SAFE_INTEGER;
-// for(i=0;i<age.length;i++){
-//     if(maximum<age[i]){
-//         maximum=age[i]
+// let age = [304, 455, 57, 90, 68, 740];
+// let maximum = Number.MIN_SAFE_INTEGER;
+
+
+// // let maximum = '';
+// for (i = 0; i < age.length; i++) {
+//     if (maximum < age[i]) {
+//         maximum = age[i]
 //     }
 // }
 // console.log(maximum)
@@ -63,11 +66,11 @@
 
 
 
-// let age =[304,5,57,0,8,740];
-// let MINIMUM=Number.MAX_SAFE_INTEGER;
-// for(i=0;i<age.length;i++){
-//     if(MINIMUM>age[i]){
-//         MINIMUM=age[i]
+// let age = [304, 5, 57, 1, 8, 740];
+// let MINIMUM = Number.MAX_SAFE_INTEGER;
+// for (i = 0; i < age.length; i++) {
+//     if (MINIMUM > age[i]) {
+//         MINIMUM = age[i]
 //     }
 // }
 // console.log(MINIMUM)
@@ -81,7 +84,7 @@
 // let fruits = new Set([0, 1, 8]);
 // let fruits1 = fruits;
 
-// fruits.add('newValue')
+// fruits1.add('newValue')
 
 
 // console.log(fruits);
@@ -127,9 +130,10 @@
 // Distruction :
 // All remaining Elements are store in an other variable:
 
-// let names=['ali', 'asghar', 'ahmad', 'akram']
-// let [name1, name2, ...other]=names;
-// console.log( name1,name2, other);
+// let names = ['ali', 'asghar', 'ahmad', 'akram']
+// let [name1, name2, ...other] = names;
+// console.log(name1, name2, other);
+// console.log(name1);
 
 
 
@@ -174,27 +178,27 @@
 
 //   To find type:
 
-// function addition(num1,num2){
-//    console.log(typeof(num1))
-//     return num1+num2;
+// function addition(num1, num2) {
+//     console.log(typeof (num1))
+//     return num1 + num2;
 // }
 
-// let result= addition('3',4)
+// let result = addition(false, 4)
 // console.log(result)
 
 
 
 // Function into a function:
 
-// const rutien=(massege,name)=>{
+// const rutien = (massege, name) => {
 //     console.log(massege);
-//     const dailyRutien=(username)=>{
-//     console.log(username);
+//     const dailyRutien = (username) => {
+//         console.log(username);
 //     }
 //     dailyRutien(name)
 
 // }
-// rutien('Hellow','Mashood')
+// rutien('Hellow', 'Mashood')
 
 
 // Default parameters
@@ -208,12 +212,12 @@
 
 // Simple function practice:
 
-// function fun1(){
+// function fun1() {
 //     console.log('this function')
-//     function fun2(){
+//     function fun2() {
 //         console.log('2nd')
 //     }
-// fun2()
+//     fun2()
 // }
 // fun1()
 
@@ -231,25 +235,26 @@
 // }
 
 
-// let arr=[23,56,3,5,8,90,223,456,3,123,-87,-67,456,9];
+// let arr = [23, 56, 3, 5, 8, 90, 223, 456, 3, 123, -87, -67, 456, 9];
 
-// for(let j=0 ; j<arr.length;j++)
-// for( let i=0;i>arr.length-j;i++){
-//     if(arr[i]>arr[i+1]){
-//        replace(arr[i],arr[i+1])
+// for (let j = 0; j < arr.length; j++) {
+//     for (let i = 0; i > arr.length - j; i++) {
+//         if (arr[i] > arr[i + 1]) {
+//             replace(arr[i], arr[i + 1])
+//         }
+
 //     }
-
 // }
+// console.log(arr);
 
 
 
+// Map method
 
-// For each method
-
-// let arr = [1, 1 ,1, 9];
-// // let sum = 0;
-//  let arr2 =arr.forEach((ele)=>ele*2)
-//    console.log(arr2);
+let arr = [1, 1, 1, 9];
+// let sum = 0;
+let arr2 = arr.map((ele) => ele * 2)
+console.log(arr2);
 
 
 
@@ -583,11 +588,11 @@
 
 // -----------Delete from specific position---------
 
-const deluser = (arr, pos) => {
-    arr.splice(pos, 1)
-    return arr
-}
-console.log(deluser([1, 2, 3, 4, 5], 2));
+// const deluser = (arr, pos) => {
+//     arr.splice(pos, 1)
+//     return arr
+// }
+// console.log(deluser([1, 2, 3, 4, 5], 2));
 // let sortedArray = array.sort((a,b)=>a-b)
 // const binarySearch=(arr,target)=>{
 //     let left=0

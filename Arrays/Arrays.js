@@ -388,16 +388,7 @@
 
 // --------find duplicate---------
 
-let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 32, 4, 5];
-duplicate = []
-for (i in arr) {
-    if (arr[i] !== duplicate) {
-        duplicate.push(arr[i])
-    }
-}
-console.log(duplicate);
-
-
+// let arr = [2, 344, 23, 543, 2, 43, 32, 43, 54, 32, 4, 5];
 // const duplicate = arr.filter((ele, index, ary) => ary.indexOf(ele) !== index);
 
 // console.log(duplicate)

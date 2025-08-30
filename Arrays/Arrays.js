@@ -328,30 +328,30 @@
 
 // Spice
 
-const arr = [23, 43, 4, 3, 13254, 6, 8, 4, 6, 78, 5,]
-arr.splice(2, 1, 'art')
-arr.splice(6, 2, 'ase')
-console.log(arr);
+// const arr = [23, 43, 4, 3, 13254, 6, 8, 4, 6, 78, 5,]
+// arr.splice(2, 1, 'art')
+// arr.splice(6, 2, 'ase')
+// console.log(arr);
 
 
 
 // itratable
 
-// let i='qwetyu'
-// for(char of i){
+// let i = 'qwetyu'
+// for (char of i) {
 //     console.log(char);
 // }
 
 // sets
 
-// let numbers= new Set([1,4,6,8])
-// // console.log(numbers);
-//  let num1 = numbers
-// num1.add('qwer')
-// numbers.add('adr')
-
+let numbers = new Set([1, 4, 6, 8])
 // console.log(numbers);
-// console.log(num1)
+let num1 = numbers
+num1.add('qwer')
+numbers.add('adr')
+
+console.log(numbers);
+console.log(num1)
 
 
 // Object Assign

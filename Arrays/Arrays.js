@@ -343,15 +343,15 @@
 // }
 
 // sets
+// let numbers = [3, 4, 5, 6]
+// let numbers = new Set([1, 4, 6, 8])
+// // console.log(numbers);
+// let num1 = numbers
+// num1.add('qwer')
+// numbers.add('adr')
 
-let numbers = new Set([1, 4, 6, 8])
 // console.log(numbers);
-let num1 = numbers
-num1.add('qwer')
-numbers.add('adr')
-
-console.log(numbers);
-console.log(num1)
+// console.log(num1)
 
 
 // Object Assign

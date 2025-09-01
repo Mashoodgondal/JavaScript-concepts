@@ -1,6 +1,6 @@
 // ----------------To reverse an array without using the reverse() method,--------------------
 
-let array = [1, 2, 6, 9, 0, 34, 3, 4, 5, 6, 7, 8]
+// let array = [1, 2, 6, 9, 0, 34, 3, 4, 5, 6, 7, 8]
 // let start = 0
 // let end = array.length - 1
 // const reverseArray = (array) => {
@@ -16,50 +16,22 @@ let array = [1, 2, 6, 9, 0, 34, 3, 4, 5, 6, 7, 8]
 // }
 // console.log(reverseArray(array));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-let start = 0;
-let end = array.length - 1;
-const reverseArray = (array) => {
-    while (start < end) {
-        let temp = array[start]
-        array[start] = array[end];
-        array[end] = temp;
-        start++
-        end--
-    }
-    return array
-}
-console.log(reverseArray(array));
-
-
 // ----------How can you find the index of a specific element in an array?-------------
 
-// let array = [1,3,4,5,9,12,14]
+let array = [1, 3, 4, 5, 9, 12, 14]
 
-// const fondIndex=(target,array)=>{
-//     for (let i = 0; i < array.length; i++) {
+const fondIndex = (target, array) => {
+    for (let i = 0; i < array.length; i++) {
 
-//     if (array[i]===target) {
-//         return i
+        if (array[i] === target) {
+            return i
 
-//     }
+        }
 
-//     }
-//     return -1
-// }
-// console.log(fondIndex(3,array));
+    }
+    return -1
+}
+console.log(fondIndex(15, array));
 
 // -----------------Another Method----------------
 

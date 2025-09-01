@@ -586,11 +586,11 @@
 
 // -----------Delete from specific position---------
 
-const deluser = (arr, pos) => {
-    arr.splice(pos, 1)
-    return arr
-}
-console.log(deluser([1, 2, 3, 4, 5], 2));
+// const deluser = (arr, pos) => {
+//     arr.splice(pos, 5)
+//     return arr
+// }
+// console.log(deluser([1, 2, 3, 4, 5], 2));
 // let sortedArray = array.sort((a,b)=>a-b)
 // const binarySearch=(arr,target)=>{
 //     let left=0

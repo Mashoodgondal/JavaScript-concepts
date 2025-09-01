@@ -1,20 +1,47 @@
 // ----------------To reverse an array without using the reverse() method,--------------------
 
-// let array = [1,3,4,5,6,7,8]
-// let start=0
-// let end=array.length-1
-// const reverseArray=(array)=>{
-// while (start<end) {
-//     let temp = array[start]
-//     array[start]= array[end]
-//     array[end]=temp
-//     start++
-//     end--
-// }
-// return array
+let array = [1, 2, 6, 9, 0, 34, 3, 4, 5, 6, 7, 8]
+// let start = 0
+// let end = array.length - 1
+// const reverseArray = (array) => {
+//     while (start < end) {
+//         let temp = array[start]
+//         array[start] = array[end]
+//         array[end] = temp
+//         start++
+//         end--
+//     }
+//     return array
 
 // }
 // console.log(reverseArray(array));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let start = 0;
+let end = array.length - 1;
+const reverseArray = (array) => {
+    while (start < end) {
+        let temp = array[start]
+        array[start] = array[end];
+        array[end] = temp;
+        start++
+        end--
+    }
+    return array
+}
+console.log(reverseArray(array));
 
 
 // ----------How can you find the index of a specific element in an array?-------------

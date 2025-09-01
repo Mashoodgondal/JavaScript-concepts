@@ -18,34 +18,31 @@
 
 // ----------How can you find the index of a specific element in an array?-------------
 
-let array = [1, 3, 4, 5, 9, 12, 14]
+// let array = [1, 3, 4, 5, 9, 12, 14]
 
-const fondIndex = (target, array) => {
-    for (let i = 0; i < array.length; i++) {
+// const fondIndex = (target, array) => {
+//     for (let i = 0; i < array.length; i++) {
 
-        if (array[i] === target) {
-            return i
+//         if (array[i] === target) {
+//             return i
 
-        }
+//         }
 
-    }
-    return -1
-}
-console.log(fondIndex(15, array));
+//     }
+//     return -1
+// }
+// console.log(fondIndex(15, array));
 
 // -----------------Another Method----------------
 
 
-// let array = [1,3,4,5,9,12,14]
+// let array = [1, 3, 4, 5, 9, 12, 14]
 // let findIndexof = array.indexOf(5)
-// console.log(findIndexof);
+// console.log(array.indexOf(9));
 
 
 
 // ---------------Write a function to remove duplicate values from an array.------------
-
-
-// let array = [1,3,4,5,3,9,12,9,5]
 
 // let removeDuplicate = array.filter((ele,index,ary)=> ary.indexOf(ele)==index)
 // console.log(removeDuplicate);
@@ -88,10 +85,10 @@ console.log(fondIndex(15, array));
 // console.log(flatArray);
 
 // ------------Write a function to find the intersection of two arrays.------------
-// let array1 = [1,3,4,5,9,12,14]
-// let array2 = [1,9,12,14]
-// let intersection = array1.filter(ele=>array2.includes(ele))
-// console.log(intersection);
+let array1 = [1, 3, 4, 5, 9, 12, 14]
+let array2 = [1, 9, 12, 14]
+let intersection = array1.filter(ele => array1.includes(ele))
+console.log(intersection);
 
 
 //-----------How can you sort an array of objects based on a specific key? (e.g., [{id: 1, name: "A"}, {id: 2, name: "B"}] sorted by name).

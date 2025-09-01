@@ -93,51 +93,52 @@
 
 //-----------How can you sort an array of objects based on a specific key? (e.g., [{id: 1, name: "A"}, {id: 2, name: "B"}] sorted by name).
 
-const data = [
-    { id: 3, name: "Charlie" },
-    { id: 1, name: "Alice" },
-    { id: 2, name: "Bob" }
-];
+// const data = [
+//     { id: 3, name: "Charlie" },
+//     { id: 1, name: "Alice" },
+//     { id: 2, name: "Bob" }
+// ];
 
-const sortedArray = data.sort((a, b) => {
-    if (a.name > b.name) return 1
-    if (a.name < b.name) return -1
-    return 0
-}
-)
-console.log(sortedArray);
+// const sortedArray = data.sort((a, b) => {
+//     if (a.name > b.name) return 1
+//     if (a.name < b.name) return -1
+//     return 0
+// }
+// )
+// console.log(sortedArray);
 
 
 
 
 // Write a function to group elements of an array based on a specific condition (e.g., group numbers by even and odd).
 
-// let array1 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
-// let array2 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
-// const grouped = (array1, array2) => {
-//     const group = {
-//         eve: [],
-//         odd: []
-//     }
-//     array1.forEach(element => {
-//         if (element % 2 == 0) {
-//             group.eve.push(element)
-//         }
-//         else {
-//             group.odd.push(element)
-//         }
-//     });
-//     array2.forEach(element => {
-//         if (element % 2 == 0) {
-//             group.eve.push(element)
-//         }
-//         else {
-//             group.odd.push(element)
-//         }
-//     });
-//     return group
-// }
-// console.log(grouped(array1, array2));
+let array1 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
+let array2 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
+const grouped = (array1, array2) => {
+    // const group = {
+    let eve = []
+    let odd = []
+    // }
+    array1.forEach(element => {
+        if (element % 2 == 0) {
+            eve.push(element)
+        }
+        else {
+            odd.push(element)
+        }
+    });
+    array2.forEach(element => {
+        if (element % 2 == 0) {
+            eve.push(element)
+        }
+        else {
+            odd.push(element)
+        }
+    });
+    return { eve, odd };
+}
+const result = grouped(array1, array2)
+console.log("Even = ", result.eve, "Odd = ", result.odd);
 
 
 

@@ -85,27 +85,27 @@
 // console.log(flatArray);
 
 // ------------Write a function to find the intersection of two arrays.------------
-let array1 = [1, 3, 4, 5, 9, 12, 14]
-let array2 = [1, 9, 12, 14]
-let intersection = array1.filter(ele => array1.includes(ele))
-console.log(intersection);
+// let array1 = [1, 3, 4, 5, 9, 12, 14]
+// let array2 = [1, 9, 12, 14]
+// let intersection = array1.filter(ele => array1.includes(ele))
+// console.log(intersection);
 
 
 //-----------How can you sort an array of objects based on a specific key? (e.g., [{id: 1, name: "A"}, {id: 2, name: "B"}] sorted by name).
 
-// const data = [
-//   { id: 3, name: "Charlie" },
-//   { id: 1, name: "Alice" },
-//   { id: 2, name: "Bob" }
-// ];
+const data = [
+    { id: 3, name: "Charlie" },
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" }
+];
 
-// const sortedArray = data.sort((a,b)=>
-// {if(a.name>b.name)return 1
-//     if (a.name<b.name)return -1
-//     return 0
-// }
-// )
-// console.log(sortedArray);
+const sortedArray = data.sort((a, b) => {
+    if (a.name > b.name) return 1
+    if (a.name < b.name) return -1
+    return 0
+}
+)
+console.log(sortedArray);
 
 
 

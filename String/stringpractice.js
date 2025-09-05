@@ -201,25 +201,28 @@
 
 // -------------find fibonacy------------
 
-const fibonacy = (num) => {
-  let firstNum = 0;
-  if (num == 0) {
-    return
-  }
-  let secondNum = 1;
-  if (num == 1) {
-    return
-  }
-  for (let i = 0; i < num; i++) {
-    let thirdNum = firstNum + secondNum;
-    console.log(" " + thirdNum);
+// const fibonacy = (num) => {
+//   let firstNum = 0;
+//   if (num == 0) {
+//     return
+//   }
+//   let secondNum = 1;
+//   if (num == 1) {
+//     return
+//   }
+//   for (let i = 0; i < num; i++) {
+//     let thirdNum = firstNum + secondNum;
+//     console.log(" " + thirdNum);
 
-    firstNum = secondNum
-    secondNum = thirdNum
+//     firstNum = secondNum
+//     secondNum = thirdNum
 
-  }
-}
-fibonacy(6)
+//   }
+
+// }
+// fibonacy(6)
+
+
 
 
 //  ------------Iterables----------------

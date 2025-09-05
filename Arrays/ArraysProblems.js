@@ -112,37 +112,66 @@
 
 // Write a function to group elements of an array based on a specific condition (e.g., group numbers by even and odd).
 
+// let array1 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
+// let array2 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
+// const grouped = (array1, array2) => {
+//     // const group = {
+//     let eve = []
+//     let odd = []
+//     // }
+//     array1.forEach(element => {
+//         if (element % 2 == 0) {
+//             eve.push(element)
+//         }
+//         else {
+//             odd.push(element)
+//         }
+//     });
+//     array2.forEach(element => {
+//         if (element % 2 == 0) {
+//             eve.push(element)
+//         }
+//         else {
+//             odd.push(element)
+//         }
+//     });
+//     return { eve, odd };
+// }
+// const result = grouped(array1, array2)
+// console.log("Even = ", result.eve, "Odd = ", result.odd);
+
+
+
+
+
+
+
+
 let array1 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
 let array2 = [2, 3, 54, 3, 5, , 3, 56, 74, 88, 65, 65, 27, 15, 74, 74, 14, 62, 44, 35, 6,]
 const grouped = (array1, array2) => {
-    // const group = {
-    let eve = []
-    let odd = []
-    // }
+    const group = {
+        eve: [],
+        odd: []
+    }
     array1.forEach(element => {
         if (element % 2 == 0) {
-            eve.push(element)
+            group.eve.push(element)
         }
         else {
-            odd.push(element)
+            group.odd.push(element)
         }
     });
     array2.forEach(element => {
         if (element % 2 == 0) {
-            eve.push(element)
+            group.eve.push(element)
         }
         else {
-            odd.push(element)
+            group.odd.push(element)
         }
     });
     return { eve, odd };
 }
-const result = grouped(array1, array2)
-console.log("Even = ", result.eve, "Odd = ", result.odd);
-
-
-
-
-
-
-
+// const result = grouped(array1, array2)
+// console.log("Even = ", result.eve, "Odd = ", result.odd);
+console.log(grouped());

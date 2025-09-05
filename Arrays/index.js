@@ -28,21 +28,21 @@
 
 // // Write the logic to check if the year is a leap year
 // if (year % 4 === 0) {
-//   console.log(`${year} is a leap year`);
+//     console.log(`${year} is a leap year`);
 // } else {
-//   console.log(`${year} is not a leap year`);
+//     console.log(`${year} is not a leap year`);
 // }
 
 // 2--------
-// let date1 = new Date("2024-10-01");
+// let date1 = new Date("2024-10-09");
 // let date2 = new Date("2024-10-01");
 
 // if (date1.getTime() < date2.getTime()) {
-//   console.log(`Date1 is earlier than Date2`);
+//     console.log(`Date1 is earlier than Date2`);
 // } else if (date1.getTime() === date2.getTime()) {
-//   console.log(`Date1 is the same as Date2`);
+//     console.log(`Date1 is the same as Date2`);
 // } else {
-//   console.log(`Date1 is later than Date2`);
+//     console.log(`Date1 is later than Date2`);
 // }
 
 // ------------ARRAYS-----------
@@ -55,7 +55,7 @@
 
 // let arr = [3, -1, 5, -9, 0, -7, 8, -4];
 // for (let index = 0; index < arr.length; index++) {
-//     if (arr[index]<0) {
+//     if (arr[index] < 0) {
 //         console.log(arr[index]);
 
 //     }
@@ -65,7 +65,7 @@
 
 // let arr = [3, -1, 5, -9, 0, -7, 8, -4];
 // for (let index = 0; index < arr.length; index++) {
-//     if (arr[index]>0) {
+//     if (arr[index] > 0) {
 //         console.log(arr[index]);
 
 //     }
@@ -75,7 +75,7 @@
 // ---------sum of Array----------
 
 // let arr = [3, 1, 5, 9, 7, 8, 4];
-// const sum = arr.reduce((cru,next) =>(cru+next))
+// const sum = arr.reduce((cru, next) => (cru + next))
 // console.log(sum);
 
 
@@ -83,16 +83,16 @@
 // ----------Count Negetive Elements--------
 
 // let array = [4, -1, -3, 7, 8, 2];
-// const countNegative=()=>{
+// const countNegative = () => {
 
-//     let Count=0
-//    for (let i = 0; i < array.length; i++) {
-//     if (array[i]<0) {
-//       Count=  Count+1;
+//     let Count = 0
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] < 0) {
+//             Count = Count + 1;
+//         }
+
 //     }
-
-//    }
-//    return Count
+//     return Count
 
 // }
 // console.log(countNegative(array));
@@ -112,7 +112,7 @@
 // let numbers = [-23, -324, 34, 234, 23, 334, 78, 34, 6576];
 // for (let i = 0; i < numbers.length; i++) {
 //     for (let j = 0; j < numbers.length - i; j++) {
-//         if (numbers[j] > numbers[j + 1]) {
+//         if (numbers[j] < numbers[j + 1]) {
 //             let temp = numbers[j]
 //             numbers[j] = numbers[j + 1]
 //             numbers[j + 1] = temp

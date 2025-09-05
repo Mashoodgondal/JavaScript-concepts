@@ -1,23 +1,24 @@
 // --------str printing--------
 
-// let str=''
+// let str = ''
 // for (let i = 0; i < 6; i++) {
-//    for (let j = 0; j < 5; j++) {
-//    str = str+'0'
+//     for (let j = 0; j < 5; j++) {
+//         str = str + '0'
 
-//    }
+//     }
+
 //     console.log(str);
-//     str=''
+//     str = ''
 
 // }
-// let str=''
+// let str = ''
 // for (let i = 0; i < 6; i++) {
-//    for (let j = i; j < 5; j++) {
-//    str = str+'s'
+//     for (let j = i; j < 5; j++) {
+//         str = str + 's'
 
-//    }
+//     }
 //     console.log(str);
-//     str=''
+//     str = ''
 
 // }
 
@@ -123,8 +124,8 @@
 // console.log(numbers);
 
 
-for (let i = 0; i < 100; i++) {
-    console.log(i, "I am a boy");
+// for (let i = 0; i < 100; i++) {
+//     console.log(i, "I am a boy");
 
 
-}
+// }

@@ -83,7 +83,21 @@
 // }
 // console.log(sum(arr));
 
-//
+let str = "lal"
+let rev = ''
+for (i = str.length - 1; i >= 0; i--) {
+    rev += str[i]
+}
+// console.log(rev);
+if (str === rev) {
+    console.log(true);
+
+} else {
+    console.log(false);
+
+}
+
+
 
 // console.log(sum(arr));
 // let arr = [2, 4, 5, 6, 7, 8, 1]

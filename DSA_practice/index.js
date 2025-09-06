@@ -81,24 +81,7 @@
 //     }
 
 // }
-// console.log(sum(arr));
-
-let str = "lal"
-let rev = ''
-for (i = str.length - 1; i >= 0; i--) {
-    rev += str[i]
-}
-// console.log(rev);
-if (str === rev) {
-    console.log(true);
-
-} else {
-    console.log(false);
-
-}
-
-
-
+// console.log(sum(arr))
 // console.log(sum(arr));
 // let arr = [2, 4, 5, 6, 7, 8, 1]
 // let arr2 = arr.reduce((pre, cru) => pre + cru)
@@ -116,12 +99,12 @@ if (str === rev) {
 // }
 
 
-// console.log(twoSum([1, 3, 4, 3, 6, 3, 6, 5, 4], 12));
-// var arg = function (a, b, c) {
+// console.log(twoSum([1, 3, 4, 3, 3, 5, 4, 8, 1], 2));
+// var arg = function (a, b, d) {
 //     return arg.length;  // This returns the number of formal parameters (3 in this case)
 // };
 
-// console.log(arg(1, 2, 3));  // Output: 3
+// console.log(arg());  // Output: 3
 
 // -------------------plus one at the end of array------------
 // var plusOne = function (digits) {
@@ -151,25 +134,25 @@ if (str === rev) {
 //  with the x-axis form a container, such that the container contains the most water.
 //                    ------------------------
 
-// var maxArea = function (height) {
-//     let left = 0
-//     let right = height.length - 1
-//     let maxWater = 0
-//     while (left < right) {
-//         let minHight = Math.min(height[left], height[right])
-//         let width = right - left
-//         let area = minHight * width
-//         maxWater = Math.max(maxWater, area)
-//         if (height[left] < height[right]) {
-//             left++;
-//         }
-//         else {
-//             right--
-//         }
-//     }
-//     return maxWater
-// };
-// console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+var maxArea = function (height) {
+    let left = 0
+    let right = height.length - 1
+    let maxWater = 0
+    while (left < right) {
+        let minHight = Math.min(height[left], height[right])
+        let width = right - left
+        let area = minHight * width
+        maxWater = Math.max(maxWater, area)
+        if (height[left] < height[right]) {
+            left++;
+        }
+        else {
+            right--
+        }
+    }
+    return maxWater
+};
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
 // console.log("Good thing is good");
 // ==================
 // var maxArea = function (height) {

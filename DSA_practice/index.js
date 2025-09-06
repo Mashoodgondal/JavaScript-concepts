@@ -5,6 +5,7 @@
 
 // 2--------- Check if a String is a Palindrome
 // let str = '323'
+
 // function reverseString(str) {
 //     let reversed = "";
 //     for (let i = str.length - 1; i >= 0; i--) {
@@ -73,13 +74,15 @@
 // // Example usage
 // console.log(countVowels(str));
 
-
+// let arr = [2, 3, 5, 6]
 // const sum = () => {
 //     for (let i = 0; i < arr.length; i++) {
 //         return arr[i] + arr[i + 1]
-
 //     }
+
 // }
+// console.log(sum(arr));
+
 //
 
 // console.log(sum(arr));

@@ -343,3 +343,17 @@
 
 
 // someDetails(person)erson)
+// }
+// someDetails(person)
+// let person= {
+//     name:'ali',
+//     age:'43',
+//     gender:'male',
+//     address:'fsd'
+// }
+
+// const someDetails=({name,age})=>{
+//     console.log(name,age);
+
+// }
+// someDetails(person)

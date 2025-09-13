@@ -341,47 +341,5 @@
 //     address:'fsd'
 // }
 
-// const someDetails=({name,age})=>{
-//     console.log(name,age);
 
-// }
-// someDetails(person)// }
-// someDetails(person)
-// let person= {
-//     name:'ali',
-//     age:'43',
-//     gender:'male',
-//     address:'fsd'
-// }
-
-// const someDetails=({name,age})=>{
-//     console.log(name,age);
-
-// }
-// someDetails(person)// }
-// someDetails(person)
-// let person= {
-//     name:'ali',
-//     age:'43',
-//     gender:'male',
-//     address:'fsd'
-// }
-
-// const someDetails=({name,age})=>{
-//     console.log(name,age);
-
-// }
-// someDetails(p// }
-// someDetails(person)
-// let person= {
-//     name:'ali',
-//     age:'43',
-//     gender:'male',
-//     address:'fsd'
-// }
-
-// const someDetails=({name,age})=>{
-//     console.log(name,age);
-
-// }
 // someDetails(person)erson)

@@ -8,12 +8,12 @@
 // console.log(fruits);
 
 
-// let name = "Hassan";
-// let newName = name.slice(1, 5);
-//   name.splice(1, 1, "B");
-// name.pop();
-// console.log(name);
-// console.log(newName);
+let name = "Hassan";
+let newName = name.slice(1, 5);
+name.splice(1, 1, "B");
+name.pop();
+console.log(name);
+console.log(newName);
 
 // let fruits = ["Mango", "Banana", "Orange", "Pineapple"];
 // let newFruits = fruits.slice(0).concat("abc");
@@ -304,11 +304,3 @@
 
 // }
 // someDetails(person)
-
-
-
-
-
-
-
-

@@ -616,3 +616,9 @@
 
 
 
+arr = [2, 3, 4]
+let newarr = []
+for (let a of arr) {
+    newarr.push(a + 1)
+}
+console.log(newarr);

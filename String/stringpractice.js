@@ -304,23 +304,3 @@ console.log(newName);
 
 // }
 // someDetails(person)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

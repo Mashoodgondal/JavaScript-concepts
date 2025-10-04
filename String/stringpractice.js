@@ -324,13 +324,3 @@ console.log(newName);
 
 
 
-// const someDetails=({name,age})=>{
-//     console.log(name,age);
-
-// }
-// someDetails(person)
-// const someDetails=({name,age})=>{
-//     console.log(name,age);
-
-// }
-// someDetails(person)

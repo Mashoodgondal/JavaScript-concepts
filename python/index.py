@@ -9,11 +9,23 @@
 
 # =========== Ratio on other planets ============
 
+new_obj={
+    "a":3,
+    "b":4,
+     "c":5,
+}
+for alphabet,number in new_obj.items():
+    print(number)
+
+
+
+
+
 
 # earth_weight = input("Enter Earth weight  ")
 # earth_weight= float(earth_weight)
 # gravity_ratios={
-#     "Mercury": 0.38,
+#         "Mercury": 0.38,
 #         "Venus": 0.91,
 #         "Mars": 0.38,
 #         "Jupiter": 2.34,
@@ -173,5 +185,5 @@
 
 # FAST LOOCKUP
 
-usernames = {"alice", "bob", "charlie"}
-print("alice" in usernames)  # Output: True (O(1) time)
+# usernames = {"alice", "bob", "charlie"}
+# print("alice" in usernames)  # Output: True (O(1) time)

@@ -31,21 +31,21 @@
 
 
 # find factorial of the number
-# num = int(input("Enter a number: "))
-# other =1
-# i=1 
-# while i<num:
-#      other *=i
-#      i +=1
-# print(f"factorial is {other}")
+num = int(input("Enter a number: "))
+other =1
+i=1 
+while i<num:
+     other *=i
+     i +=1
+print(f"factorial is {other}")
 
 
-def fib(n):
-    if n <= 1:
-        return n
-    return fib(n-1) + fib(n-2)
-for i in range(10):
- print(fib(10), end=" ")
+# def fib(n):
+#     if n <= 1:
+#         return n
+#     return fib(n-1) + fib(n-2)
+# for i in range(10):
+#  print(fib(10), end=" ")
 
 
 

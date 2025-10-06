@@ -32,13 +32,11 @@
 
 # find factorial of the number
 num = int(input("Enter a number: "))
-other =1
-i=1 
-while i<num:
-     other *=i
-     i +=1
-print(f"factorial is {other}")
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
 
+print(f"factorial is {factorial}")
 
 # def fib(n):
 #     if n <= 1:

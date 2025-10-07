@@ -92,10 +92,10 @@
 
 # COMBINE LIST 
 
-keys1 = ["name", "age","habits","city"]
-values = ["Bob", 30,["hockey","cirket"] ,"New York"]
-person = dict(zip(keys1, values))
-print(person)  
+# keys1 = ["name", "age","habits","city"]
+# values = ["Bob", 30,["hockey","cirket"] ,"New York"]
+# person = dict(zip(keys1, values))
+# print(person)  
 
 
 # FAST LOOCKUP

@@ -23,7 +23,7 @@
 
 # fruits = ["apple", "banana", "cherry", "date"]
 
-# Indexing (starts at 0)
+# # Indexing (starts at 0)
 # print(fruits[0]) 
 # print(fruits[-1])
 

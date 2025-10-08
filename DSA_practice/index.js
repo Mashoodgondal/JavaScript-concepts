@@ -360,3 +360,12 @@ console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
 // No return needed (nums1 is modified in-place)
 // };
 
+
+
+
+// Modify nums1 in-place by copying the merged elements
+// for (let i = 0; i < merged.length; i++) {
+//     nums1[i] = merged[i];
+// }
+// No return needed (nums1 is modified in-place)
+// };

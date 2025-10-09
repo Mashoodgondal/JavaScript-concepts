@@ -615,19 +615,3 @@
 
 
 
-
-
-
-
-
-
-// const deluser = (arr, pos) => {
-//     arr.splice(pos, 5)
-//     return arr
-// }// const deluser = (arr, pos) => {
-//     arr.splice(pos, 5)
-//     return arr
-// }// const deluser = (arr, pos) => {
-//     arr.splice(pos, 5)
-//     return arr
-// }
